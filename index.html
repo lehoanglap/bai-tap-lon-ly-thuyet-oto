@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lý thuyết ô tô</title>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i|Ubuntu|Zhi+Mang+Xing&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="css/boostrap.css">
+    <link rel="stylesheet" href="css/BootstrapVue.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"> -->
+
+
+
+
+    
+    <script src="javascrip/jquery.js"></script>
+    <script src="javascrip/vue.js"></script>
+    <script src="javascrip/anime.js"></script>
+    <script src="javascrip/boostrap.js"></script>
+    <script src="javascrip/BootstrapVue.js"></script>
+    <script src="javascrip/highcharts.js"></script>
+
+    <!-- <script src="../fm/chart.js"></script> -->
+    <!-- <script src="../fm/utils.js"></script> -->
+
+
+
+
+    <script src="javascrip/controler.js"></script>
+    <script src="javascrip/animation.js"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="conten_menu">
+                <div class="container_1">
+                    <div class="logo">
+                        <p><a href="#">LOGO</a></p>
+                    </div>
+
+                    <div class="ndul">
+                        <ul>
+                            <li><a href="#">Xin chào: <samp>Admin</samp></a></li>
+                            <li><a href="#" class="but"> Follow </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="head">
+            <div class="dong">
+
+            </div>
+            <div class="nd_img">
+
+
+                <div class="row">
+                    <div class="col-7">
+                        <p class="text1">Tính toán sơ bộ:</p>
+                    </div>
+                    <div class="col-5">
+                        <div class="text">
+                            <ul>
+                                <li>Các thông số cơ bản ô tô</li>
+                                <li>Vận tốc, gia tốc</li>
+                                <li>Biểu đồ vận tốc, gia tốc ứng với các tay số</li>
+                                <li>Đường đặc tính ngoài... vvv</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hop1">
+                <svg class="svg1" width="76" height="57" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="evenodd">
+                        <circle cx="14" cy="13" r="2" />
+                        <circle cx="14" cy="2" r="2" />
+                        <circle cx="14" cy="23" r="2" />
+                        <circle cx="14" cy="34" r="2" />
+                        <circle cx="14" cy="45" r="2" />
+                        <circle cx="14" cy="55" r="2" />
+                        <circle cx="2" cy="13" r="2" />
+                        <circle cx="2" cy="2" r="2" />
+                        <circle cx="2" cy="23" r="2" />
+                        <circle cx="2" cy="34" r="2" />
+                        <circle cx="2" cy="45" r="2" />
+                        <circle cx="2" cy="55" r="2" />
+                        <circle cx="26" cy="13" r="2" />
+                        <circle cx="26" cy="2" r="2" />
+                        <circle cx="26" cy="23" r="2" />
+                        <circle cx="26" cy="34" r="2" />
+                        <circle cx="26" cy="45" r="2" />
+                        <circle cx="26" cy="55" r="2" />
+                        <circle cx="38" cy="13" r="2" />
+                        <circle cx="38" cy="2" r="2" />
+                        <circle cx="38" cy="23" r="2" />
+                        <circle cx="38" cy="34" r="2" />
+                        <circle cx="38" cy="45" r="2" />
+                        <circle cx="38" cy="55" r="2" />
+                        <circle cx="50" cy="13" r="2" />
+                        <circle cx="50" cy="2" r="2" />
+                        <circle cx="50" cy="23" r="2" />
+                        <circle cx="50" cy="34" r="2" />
+                        <circle cx="50" cy="45" r="2" />
+                        <circle cx="50" cy="55" r="2" />
+                        <circle cx="62" cy="13" r="2" />
+                        <circle cx="62" cy="2" r="2" />
+                        <circle cx="62" cy="23" r="2" />
+                        <circle cx="62" cy="34" r="2" />
+                        <circle cx="62" cy="45" r="2" />
+                        <circle cx="62" cy="55" r="2" />
+                        <circle cx="74" cy="13" r="2" />
+                        <circle cx="74" cy="2" r="2" />
+                        <circle cx="74" cy="23" r="2" />
+                        <circle cx="74" cy="34" r="2" />
+                        <circle cx="74" cy="45" r="2" />
+                        <circle cx="74" cy="55" r="2" />
+                    </g>
+                </svg>
+
+                <svg class="svg2" xmlns="http://www.w3.org/2000/svg" width="65" height="74">
+                    <path fill-rule="evenodd"
+                        d="M64.543 7.293l-.179 60.641c-.202 3.407-3.093 6.003-6.458 5.798a6.05 6.05 0 0 1-2.686-.817L3.607 42.751c-2.92-1.706-3.92-5.485-2.234-8.44a6.149 6.149 0 0 1 1.923-2.067l51.79-30.477c2.814-1.88 6.6-1.096 8.458 1.751a6.236 6.236 0 0 1 .999 3.775z" />
+                </svg>
+
+                <svg class="svg3" width="43" height="43" xmlns="http://www.w3.org/2000/svg">
+                    <circle fill-rule="evenodd" cx="21.5" cy="21.5" r="21.5" /></svg>
+
+                <svg class="svg4" xmlns="http://www.w3.org/2000/svg" width="132" height="132">
+                    <path fill-rule="evenodd"
+                        d="M81.603 14l36.396 36.397c18.668 18.668 18.668 48.935 0 67.602-18.667 18.668-48.934 18.668-67.602 0L14.001 81.603C-4.667 62.935-4.667 32.668 14 14 32.668-4.667 62.935-4.667 81.603 14z" />
+                </svg>
+
+                <svg class="svg5" xmlns="http://www.w3.org/2000/svg" width="211" height="171">
+                    <path fill-rule="evenodd"
+                        d="M152.955 155.323c-50.494 29.359-113.79 16.16-148.937-28.546-3.49-4.44-9.18-14.48 5.866-23.227L182.612 3.12c13.636-7.93 17.444 1.232 19.311 5.688 22.418 53.517 2.273 116.722-48.968 146.515z" />
+                </svg>
+
+                <svg class="svg6" xmlns="http://www.w3.org/2000/svg" width="371" height="371">
+                    <path fill-rule="evenodd"
+                        d="M7.61 166.895L166.896 7.611c10.148-10.148 26.6-10.148 36.748 0l159.293 159.292c10.147 10.148 10.147 26.6 0 36.748L203.65 362.936c-10.147 10.147-26.6 10.147-36.748 0L7.611 203.643c-10.148-10.147-10.148-26.6 0-36.748z" />
+                </svg>
+
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <article>
+        <br>
+        <div class="ndt1">
+            <div class="p1">
+                <h1>THIẾT KẾ TUYẾN HÌNH ÔTÔ</h1>
+
+            </div>
+
+            <br>
+
+            <div class="p1nd1">
+
+                <div class="imgcar">
+                    <div class="img">
+                        <img src="img/A1713401_full.jpg" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+    <article>
+        <div class="p1nd1">
+            <h3>I) Điền các kích thước cơ bản của xe.</h3>
+            <br>
+
+        </div>
+
+        <div class="form">
+
+            <form class="needs-validation form1 was-validated" novalidate>
+
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip01">Chiều dài toàn bộ (Lo)</label>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="VD: 4969mm"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip02">Chiều rộng toàn bộ (Bo) </label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="VD: 2118mm"
+                            required>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip03">Chiều cao toàn bộ (Ho) </label>
+                        <input type="text" class="form-control" id="validationTooltip03" placeholder="VD: 1422mm"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip04">Chiều dài cơ sở (L)</label>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="VD: 2926mm"
+                            required>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip05">Vết bánh trước (B1)</label>
+                        <input type="text" class="form-control" id="validationTooltip05" placeholder="VD: 1651mm"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip06">Vết bánh sau (B2)</label>
+                        <input type="text" class="form-control" id="validationTooltip06" placeholder="VD: 1637mm"
+                            required>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip07">Khoảng sáng gầm xe (H1)</label>
+                        <input type="text" class="form-control" id="validationTooltip07" placeholder="VD: . . .mm"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip08">Góc thoát trước (γ1)</label>
+                        <input type="text" class="form-control" id="validationTooltip08" placeholder="VD: . . .mm"
+                            required>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip09">Góc thoát sau (γ2)</label>
+                        <input type="text" class="form-control" id="validationTooltip09" placeholder="VD: . . .MM"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip10">Vận tốc tối đa (Vmax)</label>
+                        <input type="text" class="form-control" id="validationTooltip10" placeholder="VD: 250 Km/h"
+                            required>
+
+                    </div>
+
+                </div>
+                <!-- <button v-on:click="upload" class="btn btn-primary nut1" type='button'>Hiện bảng giá trị kích thước cơ
+                    bản</button> -->
+            </form>
+            <br>
+            <br>
+            <br>
+
+
+        </div>
+
+    </article>
+
+    <article>
+        <div class="p1nd1">
+            <h3>II) Thông số thiết kế, thông số chọn và tính chọn.</h3>
+            <br>
+
+
+
+        </div>
+
+        <div class="form">
+            <h4>a) Thông số theo thiết kế phác thảo</h4>
+            <br>
+            <form class="needs-validation was-validated" novalidate>
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip11">Loại động cơ</label>
+                        <input type="text" class="form-control" id="validationTooltip11"
+                            placeholder="VD: động cơ xăng, 6 xylanh thẳng hàng, VVT-i" required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip12">Dung tích công tác (Vc) </label>
+                        <input type="text" class="form-control" id="validationTooltip12" placeholder="VD: 2694cc"
+                            required>
+
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip13">Công suất tối đa (Pmax)</label>
+                        <input type="text" class="form-control" id="validationTooltip13" placeholder="VD: 164 mã lực"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip14">Tốc độ động cơ (ne) </label>
+                        <input type="text" class="form-control" id="validationTooltip14" placeholder="VD: VD: 6200 v/p"
+                            required>
+
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="form-row">
+
+                    <div class="col-6">
+                        <label for="validationTooltip15">Mômen xoắn tối đa (Me)</label>
+                        <input type="text" class="form-control" id="validationTooltip15" placeholder="VD: 2000 N.m"
+                            required>
+
+
+                    </div>
+
+                    <div class="col-6">
+                        <label for="validationTooltip16">Hệ thống truyền lực</label>
+                        <input type="text" class="form-control" id="validationTooltip16"
+                            placeholder="VD: Động cơ đặt trước, hai cầu chủ động, hộp số tự động 6 cấp" required>
+
+                    </div>
+
+                </div>
+                <br>
+
+
+
+
+
+            </form>
+        </div>
+
+        <div class="form">
+            <h4>b) Thông số chọn</h4>
+            <br>
+            <form class="needs-validation was-validated" novalidate>
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip17">Trọng lượng bản thân (Go)</label>
+                        <input type="text" class="form-control" id="validationTooltip17" placeholder="VD: 2000 Kg"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip18">Trọng lượng hành khách (Gh) </label>
+                        <input type="text" class="form-control" id="validationTooltip18" placeholder="VD: 70 Kg"
+                            required>
+
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="form-row">
+                    <div class="col-6">
+                        <label for="validationTooltip19">Trọng lượng hành lí (Ghl)</label>
+                        <input type="text" class="form-control" id="validationTooltip19" placeholder="VD: 10 Kg"
+                            required>
+
+                    </div>
+                    <div class="col-6">
+                        <label for="validationTooltip20">Hiệu suất truyền lực (ntl) <samp class="btn btn-warning hstl"
+                                style="display: inline;">Hướng dẫn
+                                chọn</samp> </label>
+                        <input type="text" class="form-control" id="validationTooltip20" id="validationTooltip20"
+                            placeholder="VD: VD: 0,92" required>
+
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="form-row">
+
+                    <div class="col-6">
+                        <label for="validationTooltip21">Hệ số cản không khí (K)
+                            <samp class="btn btn-warning hdchonK" style="display: inline;">Hướng dẫn
+                                chọn</samp>
+                        </label>
+                        <input type="text" class="form-control" id="validationTooltip21" placeholder="VD: 0.25"
+                            required>
+
+
+                    </div>
+
+                    <div class="col-6">
+                        <label for="validationTooltip22">Hệ số cản lăn (fo) <samp class="btn btn-warning hdchonfo"
+                                style="display: inline;">Hướng dẫn
+                                chọn</samp></label>
+                        <input type="text" class="form-control" id="validationTooltip22"
+                            placeholder="Tùy thuộc vào chất lượng mặt đường" required>
+
+                    </div>
+
+                </div>
+
+            </form>
+            <br>
+
+            <div class="table1">
+
+            </div>
+
+            <div class="table2">
+
+
+            </div>
+
+            <div class="table3">
+                <!-- <div class="alert alert-warning alert-dismissible fade show xoa" role="alert" style="transition: ease-in;">
+                    <strong>Hệ số cản không khí K</strong> Bảng hệ số cản không khí bên dưới.
+                    <br>
+              <div id="hdtable3">
+                <div>
+                    <b-table striped hover :items="items"></b-table>
+                  </div>
+    
+              </div>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                    
+                </div> -->
+
+            </div>
+
+
+            <br>
+            <br>
+            <h4>c) Thông số tính chọn <samp class="btn btn-outline-success kqtc" style="display: inline;"> kiết quả tính
+                    chọn
+                </samp></h4>
+            <br>
+            <div class="frint1 alert alert-primary alert-dismissible fade show  an" id="kqtinhchon">
+
+            </div>
+
+
+
+
+            <br>
+            <h5>- Hệ số cản lăn ứng với Vmax (f)</h5>
+
+            <h5>- Diện tích cản chính diện (F)</h5>
+            <form class="needs-validation was-validated">
+
+                <div class="form-group row">
+                    <label style="font-size: 20px;
+                  text-align: center;" for="inputPassword" class="col-4 col-form-label">Hệ số diện tích cản chính
+                        diện</label>
+                    <div class="col-3">
+                        <input type="text" class="form-control" id="hs_can_chinh_dien" placeholder="VD: 0.78" required>
+                    </div>
+                </div>
+                <div style="margin-left: 4%;" class="col-6">
+                    <p style="font-size: 1.2em;
+                            font-weight: bold;
+                            letter-spacing: 0.5px;">Diện tích cản tính như sau:</p>
+                    <ul>
+
+                        <li style="font-size: 1.2em;">Xe tải: <strong class="text-danger">F = B1.Ho</strong></li>
+                        <li style="font-size: 1.2em;">Xe con: <strong class="text-danger">F = 0,78.Bo.Ho</strong></li>
+                        <br>
+                        <strong class="text-danger">Chỉ cần nhập hệ số 1 (Tải) hay 0.78 (con) (còn đâu máy tự chọn công
+                            thức) </strong>
+                    </ul>
+
+                </div>
+
+            </form>
+
+            <h5>- Bán kính bánh xe.</h5>
+            <br>
+
+            <div class="imgbx">
+                <div class="row">
+                    <div class="col-5">
+                        <form class="needs-validation was-validated" novalidate>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="validationTooltip23">Chiều rộng mặt lốp (B)</label>
+                                    <input type="text" class="form-control" id="validationTooltip23"
+                                        placeholder="VD: 205 mm" required>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="validationTooltip24">Tỉ lệ % chiều cao hông lốp vs chiều rộng lốp
+                                        (H/B)</label>
+                                    <input type="text" class="form-control" id="validationTooltip24"
+                                        placeholder="VD: 55 %, tham khảo trang 21" required>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="validationTooltip25">Đường kính vành xe (d)</label>
+                                    <input type="text" class="form-control" id="validationTooltip25"
+                                        placeholder="VD: 16 inch" required>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="validationTooltip26">Hệ số kể đến biến dạng lốp (λo)</label>
+                                    <input type="text" class="form-control" id="validationTooltip26"
+                                        placeholder="VD: 0.945 thường lấy áp suất cao" required>
+
+                                </div>
+                            </div>
+                            <br>
+                            <p class="text-danger" style="font-size: 1.2em;">Lấy ví dụ về kí hiệu
+                                <strong>205/55R16</strong></p>
+
+                            <p style="font-size: 1.2em;
+                            font-weight: bold;
+                            letter-spacing: 0.5px;">Hệ số biến dạng lốp:</p>
+                            <ul>
+
+                                <li style="font-size: 1.2em;">Lốp Áp suất thấp: <strong class="text-danger">λ = 0.93 -
+                                        0.935</strong></li>
+                                <li style="font-size: 1.2em;">Lốp Áp suất cao: <strong class="text-danger">λ = 0.945 -
+                                        0.950</strong></li>
+                            </ul>
+
+                        </form>
+
+
+
+
+                    </div>
+                    <div class="col-7">
+                        <div class="imglx">
+                            <br>
+
+                            <img src="img/kh_lop_oto.jpg" alt="#">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+        <div class="form">
+            <h4>d) Xác định trọng lượng và phân bố trọng lượng lên ô tô. <samp
+                    class="btn btn-outline-success phan_bo_trong_luong" style="display: inline;"> kiết quả tính
+                </samp></h4>
+            <br>
+            <div class="frint2 alert alert-primary alert-dismissible fade show  an" id="kqpbtl">
+
+            </div>
+            <br>
+            <div class="imgcau">
+                <div class="row">
+                    <div class="col-7">
+                        <br>
+                        <img src="img/cau-tao-o-to-2-cau.jpg" alt="#">
+                    </div>
+                    <div class="col-5">
+                        <form class="needs-validation was-validated" novalidate>
+
+                            <div class="form-row">
+
+                                <div class="col">
+                                    <label for="validationTooltip27">Số chỗ trên ô tô.</label>
+                                    <input type="text" class="form-control" id="validationTooltip27"
+                                        placeholder="VD: 4 người" required>
+
+
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="form-row">
+
+                                <div class="col">
+                                    <label for="validationTooltip28">% lực cầu trước (Z1)</label>
+                                    <input type="text" class="form-control" id="validationTooltip28"
+                                        placeholder="VD: 40 %" required>
+
+
+                                </div>
+                                <div class="col">
+                                    <label for="validationTooltip29">% lực cầu sau (Z2)</label>
+                                    <input type="text" class="form-control" id="validationTooltip29"
+                                        placeholder="VD: 60 %" required>
+
+
+                                </div>
+
+
+                            </div>
+                            <br>
+
+                            <div>
+                                <p style="font-size: 1.3em;
+                            font-weight: bold;
+                            letter-spacing: 0.5px;">Phân bố lực lên các cầu</p>
+                                <ul class="tip">
+                                    <p style="font-size: 1.3em;
+                                
+                                letter-spacing: 0.5px;">Với ôtô tải</p>
+                                    <li>Đường loại I, II: <strong class="text-danger">Z2 = (62% - 70%)G</strong> </li>
+                                    <li>tất cả loại đường: <strong class="text-danger">Z2 = (70% - 75%)G</strong> </li>
+                                </ul>
+                                <br>
+                                <ul class="tip">
+                                    <p style="font-size: 1.3em;
+                                
+                                letter-spacing: 0.5px;">Với ôtô con</p>
+                                    <li>Động cơ đặt phía trước: <strong class="text-danger">Z2 = (40% - 45%)G</strong>
+                                    </li>
+                                    <li>Động cơ đặt phía sau: <strong class="text-danger">Z2 = (56% - 60%)G</strong>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </article>
+    <br>
+    <br>
+
+
+    <!-- /////////////////////////////////// -->
+    <!-- /////////////////////////////////// -->
+    <!-- xong phần thiết kế tuyến tính -->
+    <!-- /////////////////////////////////// -->
+    <!-- /////////////////////////////////// -->
+
+    <article>
+        <div class="p1">
+            <h1>TÍNH TOÁN SỨC KÉO</h1>
+
+        </div>
+        <br>
+        <br>
+        <div>
+            <div class="tong">
+                <h3>I) Đường đặc tính tốc độ ngoài của động cơ.
+                    <samp class="btn btn-warning hdddt" style="display: inline;">Hướng dẫn</samp> <samp
+                        class="btn btn-outline-success kqtdn" style="display: inline;"> kiết quả
+
+                    </samp>
+                </h3>
+                <p></p>
+                <div class="kqtdndc an">
+
+
+
+                </div>
+            </div>
+            <br>
+
+
+
+            <div class="hd1 an" style="width: 90%; margin: auto; font-size: 1.15em;">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <!-- ------ -->
+                    <p>Các đường đặc tính tốc độ ngoài của động cơ là những đường cong biểu diễn sự phụ thuộc của các
+                        đại lượng công suất, mômen và suất tiêu hao nhiên liệu của động cơ theo số vòng quay của trục
+                        khuỷu động cơ. Các đường đặc tính này gồm:</p>
+                    <ul>
+                        <li>Đường công suất: Ne = f(ne)
+                        </li>
+                        <li> Đường mômen xoắn : Me = f(ne)</li>
+                        <li>Đường suất tiêu hao nhiên liệu của động cơ : ge = f(ne)</li>
+                    </ul>
+                    <div>
+                        <p><strong>B1:</strong> Tính công suất cần thiết của động cơ.</p>
+                        <p><img src="https://latex.codecogs.com/png.latex?\large&space;N_{ev}=\frac{1}{\eta&space;_{tl}}(G.\psi&space;_{v}.V_{max}&plus;K.F.V_{max}^{3})&space;[W]"
+                                title="\large N_{ev}=\frac{1}{\eta _{tl}}(G.\psi _{v}.V_{max}+K.F.V_{max}^{3}) [W]" />
+                        </p>
+                        <p>Trong đó:</p>
+                        <ul style="color: black;">
+                            <li>
+                                <p><img src="https://latex.codecogs.com/png.latex?\LARGE&space;\eta&space;_{tl}"
+                                        title="\LARGE \eta _{tl}" />: hiệu suất của hệ thống truyền lực.</p>
+                            </li>
+                            <li>
+                                <p>F: diện tichs cản chính diện của ôtô (m2)</p>
+                            </li>
+                            <li>
+                                <p>K: hệ số cản không khí</p>
+                            </li>
+                            <li>
+                                <p> <img src="https://latex.codecogs.com/png.latex?\LARGE&space;V_{max}"
+                                        title="\LARGE V_{max}" />: Vận tốc cực đại của ôtô</p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/png.latex?\LARGE&space;\psi&space;_{v}"
+                                        title="\LARGE \psi _{v}" />: hệ số cản tổng cộng ứng với Vmax</p>
+                            </li>
+                        </ul>
+                        <p><strong>B2:</strong> Tính công suất cực đại</p>
+                        <p><img src="https://latex.codecogs.com/png.latex?\large&space;N_{emax}=\frac{N_{ev}}{a.\lambda&space;&plus;b.\lambda&space;^{2}-c.\lambda&space;^{3}}"
+                                title="\large N_{emax}=\frac{N_{ev}}{a.\lambda +b.\lambda ^{2}-c.\lambda ^{3}}" /></p>
+                        <p>Trong đó</p>
+                        <ul style="color: black;">
+                            <li>
+                                <p>a,b,c: hệ số phù thuộc vào loại động cơ</p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/png.latex?\lambda&space;=\frac{n_{emax}}{n_{N}}"
+                                        title="\lambda =\frac{n_{emax}}{n_{N}}" /></p>
+                            </li>
+                        </ul>
+                        <p><strong>B3: </strong> Phân tích</p>
+                        <ul style="color: black;">
+                            <li>
+                                <p><img src="https://latex.codecogs.com/png.latex?\large&space;N_{e}=N_{emax}.(a.\lambda&space;&plus;b.\lambda&space;^{2}-c.\lambda&space;^{3})"
+                                        title="\large N_{e}=N_{emax}.(a.\lambda +b.\lambda ^{2}-c.\lambda ^{3})" /></p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/png.latex?\large&space;n_{e}=\lambda&space;.n_{N}"
+                                        title="\large n_{e}=\lambda .n_{N}" /></p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/png.latex?\large&space;M_{e}=9550.\frac{N_{e}}{n_{e}}"
+                                        title="\large M_{e}=9550.\frac{N_{e}}{n_{e}}" /></p>
+                            </li>
+                        </ul>
+                        <p>Để vẽ đồ thị đường đặc tính tốc độ ngoài ta chỉ cần thay đổi λ. <strong>Nhớ điền đầy đủ thông
+                                số bên dưới</strong></p>
+                        <hr style="border-top-color: #9c988b;">
+                        <p><strong>B4: </strong> Tính giá trị Momen max Me(max), công suất max Ne(max)</p>
+                        <p></p>
+                        <p style="font-weight: bold;">+ Tính Momen max</p>
+                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;M_{e}=\frac{N_{e}}{\omega&space;_{e}}=\frac{N_{emax}}{\omega&space;_{N}}.[a&plus;b.\frac{\omega&space;_{e}}{\omega&space;_{N}}-c.(\frac{\omega&space;_{e}}{\omega&space;_{N}})^{2}]"
+                                title="\large M_{e}=\frac{N_{e}}{\omega _{e}}=\frac{N_{emax}}{\omega _{N}}.[a+b.\frac{\omega _{e}}{\omega _{N}}-c.(\frac{\omega _{e}}{\omega _{N}})^{2}]" />
+                        </p>
+                        <p>Đạo hàm hai vế ta có: <img
+                                src="https://latex.codecogs.com/gif.latex?\fn_cs&space;\large&space;0=\frac{N_{emax}}{\omega&space;_{N}}.[b-2c.(\frac{\omega&space;_{e}}{\omega&space;_{N}})]\Rightarrow&space;\frac{\omega&space;_{e}}{\omega&space;_{N}}=\frac{b}{2c}"
+                                title="\large 0=\frac{N_{emax}}{\omega _{N}}.[b-2c.(\frac{\omega _{e}}{\omega _{N}})]\Rightarrow \frac{\omega _{e}}{\omega _{N}}=\frac{b}{2c}" />
+                        </p>
+                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;\Rightarrow&space;M_{e}=\frac{N_{emax}}{\omega&space;_{N}}.[a&plus;\frac{b.b}{2c}-c.(\frac{b}{2c})^{2}]"
+                                title="\large \Rightarrow M_{e}=\frac{N_{emax}}{\omega _{N}}.[a+\frac{b.b}{2c}-c.(\frac{b}{2c})^{2}]" />
+                        </p>
+                        <p>Trong đó:</p>
+                        <ul style="color: black;">
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\large&space;N_{emax}"
+                                        title="\large N_{emax}" />: Công xuất cực đại của động cơ [W]</p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\large&space;\omega&space;_{N}=\frac{2\pi.n_{N}&space;}{60}"
+                                        title="\large \omega _{N}=\frac{2\pi.n_{N} }{60}" /> với: nN- số vòng quay chọn
+                                    bên dưới</p>
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p style="font-weight: bold;">+ Tính Công suất động cơ</p>
+                        <p>- Công suất động cơ thực tế bao giờ cũng lớn hơn công suất cản chuyển động nên chọn:</p>
+                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;N_{emax}=1,1.N_{emaxLT}"
+                                title="\large N_{emax}=1,1.N_{emaxLT}" /></p>
+
+
+                    </div>
+
+
+
+                    <!-- ------ -->
+                    <button type="button" class="close hddttd" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form">
+                <h4>Chọn thông số </h4>
+                <br>
+                <!-- form -->
+                <form class="needs-validation was-validated" novalidate="">
+                    <div class="form-row">
+                        <div class="col-6">
+                            <label for="validationTooltip12">Hệ số phù thuộc vào loại động cơ (a,b,c) </label>
+
+                            <select class="custom-select" id="hesoabc" required>
+                                <option value="">Chọn loại động cơ</option>
+                                <option value="TH1">Động cơ xăng (a=b=c=1)</option>
+                                <option value="TH2">Động cơ diezel 4 kì buồng cháy trực tiếp (a=0.5, b=1.5, c=1)
+                                </option>
+                                <option value="TH3">Động cơ diezel 4 kì buồng cháy dự bị (a=0.6, b=1.4, c=1)</option>
+                                <option value="TH4">Động cơ diezel 4 kì buồng xoáy lốc (a=0.5, b=1.5, c=1)</option>
+                            </select>
+
+
+
+                        </div>
+                        <div class="col-6">
+                            <label for="validationTooltip12">Hệ số cản tổng cộng ứng với Vmax <samp
+                                    class="btn btn-warning hdhsctc" style="display: inline;">Hướng dẫn
+                                    chọn</samp></label>
+                            <input type="text" class="form-control" id="hscantc" placeholder="Xem hướng dẫn chọn"
+                                required="">
+
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="form-row">
+                        <div class="col-6">
+                            <label for="validationTooltip13">Tỉ số λ (λ=ne_max/nN) <samp class="btn btn-warning tisotd"
+                                    style="display: inline;">Hướng dẫn chọn</samp></label>
+                            <input type="text" class="form-control" id="tisolamda" placeholder="Xem hướng dẫn chọn"
+                                required="">
+
+                        </div>
+                        <div class="col-6">
+                            <label for="validationTooltip14">Chọn tốc độ vòng quay (nN) <samp
+                                    class="btn btn-warning chonvongquay" style="display: inline;">Hướng dẫn
+                                    chọn</samp></label>
+                            <input type="text" class="form-control" id="csvquay" placeholder="Xem hướng dẫn chọn"
+                                required="">
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                </form>
+
+
+                <!-- huong dan chon -->
+                <br>
+                <!-- ---------1---------- -->
+                <div style="
+                
+                font-size: 1.15em;" class="alert alert-warning alert-dismissible fade show hdhsctco an" role="alert">
+                    <p><strong>Hệ số cản tổng cộng ứng với Vmax!</strong> chọn thông số tương ứng.</p>
+                    <br>
+                    <ul style="color: black;">
+                        <li>
+                            <p>Đối với ôtô có công thức bánh xe 4x2: <img
+                                    src="https://latex.codecogs.com/gif.latex?\large&space;\psi&space;_{max}"
+                                    title="\large \psi _{max}" /> = 0.3 - 0.45</p>
+                        </li>
+                        <li>
+                            <p>Đối với ôtô con: <img
+                                    src="https://latex.codecogs.com/gif.latex?\large&space;\psi&space;_{max}"
+                                    title="\large \psi _{max}" /> = 0.3 - 0.4</p>
+                        </li>
+                        <li>
+                            <p>Đối với ôtô tải và ôtô buýt: <img
+                                    src="https://latex.codecogs.com/gif.latex?\large&space;\psi&space;_{max}"
+                                    title="\large \psi _{max}" /> = 0.28 - 0.44</p>
+                        </li>
+                        <li>
+                            <p>Đối với ôtô tải có công thức bánh xe 6x4: <img
+                                    src="https://latex.codecogs.com/gif.latex?\large&space;\psi&space;_{max}"
+                                    title="\large \psi _{max}" /> = 0.4 - 0.55</p>
+                        </li>
+                        <li>
+                            <p>Đối với ôtô có tính cơ động cao: <img
+                                    src="https://latex.codecogs.com/gif.latex?\large&space;\psi&space;_{max}"
+                                    title="\large \psi _{max}" /> = 0.6 - 0.7</p>
+                        </li>
+                    </ul>
+                    <button type="button" class="close nutt01" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <br>
+                </div>
+
+                <!-- -----------1----------- -->
+
+                <!-- -----------2--------------- -->
+                <div style="
+                
+                font-size: 1.15em;" class="alert alert-warning alert-dismissible fade show hdtsldd an" role="alert">
+                    <p><strong>Tỉ số λ (λ=ne_max/nN)</strong> chọn thông số tương ứng.</p>
+                    <br>
+                    <ul style="color: black;">
+                        <li>
+                            <p>Động cơ xăng không hạn chế số vòng quay: λ = 1.1 - 1.3</p>
+                        </li>
+                        <li>
+                            <p>Động cơ xăng hạn chế số vòng quay: λ = 0.8 - 0.9</p>
+                        </li>
+                        <li>
+                            <p>Động cơ diezel: λ = 0.9 - 1.0</p>
+                        </li>
+                        <li>
+                            <p>Động cơ có bộ phận hạn chế hay điều chỉnh số vòng quay thì: λ = 1.0</p>
+                        </li>
+                    </ul>
+                    <button type="button" class="close nutt02" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <br>
+                </div>
+
+                <!-- --------------2--------------- -->
+
+                <!-- -----------3--------------- -->
+                <div style="
+                
+                font-size: 1.15em;" class="alert alert-warning alert-dismissible fade show hdtdqq an" role="alert">
+                    <p><strong>Chọn tốc quay (<img src="https://latex.codecogs.com/gif.latex?\large&space;N_{n}"
+                                title="\large N_{n}" />)</strong> chọn thông số tương ứng.</p>
+                    <br>
+                    <p>Động cơ xăng</p>
+                    <ul style="color: black;">
+                        <li>
+                            <p>Ôtô con: <img src="https://latex.codecogs.com/gif.latex?\large&space;N_{n}"
+                                    title="\large N_{n}" /> = 4500 - 6000 v/f</p>
+                        </li>
+                        <li>
+                            <p>Ôtô tải và ôtô khách: <img src="https://latex.codecogs.com/gif.latex?\large&space;N_{n}"
+                                    title="\large N_{n}" /> = 3000 - 4600 v/f</p>
+                        </li>
+
+                    </ul>
+                    <p>Động cơ diezel</p>
+                    <ul style="color: black;">
+                        <li>
+                            <p>Ôtô con: <img src="https://latex.codecogs.com/gif.latex?\large&space;N_{n}"
+                                    title="\large N_{n}" /> = 3500 - 4600 v/f</p>
+                        </li>
+                        <li>
+                            <p>Ôtô tải và ôtô khách: <img src="https://latex.codecogs.com/gif.latex?\large&space;N_{n}"
+                                    title="\large N_{n}" /> = 2000 - 3200 v/f</p>
+                        </li>
+
+                    </ul>
+                    <button type="button" class="close nutt03" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <br>
+                <!-- --------------3--------------- -->
+
+
+                <!-- huong dan chon -->
+                <!-- phan bieu do dac tinh ngoai -->
+
+                <!-- end bieu do dac tinh -->
+
+
+                <!-- form -->
+
+
+                <!-- ////////---------so do -->
+
+
+
+                <!-- ////////---------so do -->
+
+                <!-- phần  tỉ số truyền của hệ thống truyền  -->
+
+            </div>
+            <div class="tong">
+                <h3>II) Cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô.
+                    <samp class="btn btn-warning hdcblk" style="display: inline;">Hướng dẫn</samp>
+                    <samp class="btn btn-outline-success kqcblkk" style="display: inline;"> kiết quả
+
+                    </samp>
+                </h3>
+
+                <br>
+
+
+            </div>
+            <div class="form">
+                <div class="kqdtcblk frint alert alert-primary alert-dismissible fade show an">
+                    <div id="ket_qua_dt_cbl"></div>
+
+
+                </div>
+
+                <div class="hd2btcblk an" style="margin: auto; font-size: 1.15em;">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <!-- ------ -->
+                        <p><strong>Phương trình cân bằng lực kéo:</strong></p>
+                        <div class="row">
+                            <div class="col-6" style="position: relative;">
+                                <p style="position: absolute;top: 50%;transform: translateY(-50%);"> <img
+                                        src="https://latex.codecogs.com/gif.latex?\large&space;P_{k}=P_{f}&plus;P_{i}&plus;P_{j}&plus;P_{W}&plus;P_{m}"
+                                        title="\large P_{k}=P_{f}+P_{i}+P_{j}+P_{W}+P_{m}" /></p>
+
+
+                            </div>
+                            <div class="col-6">
+                                <p>Trong đó:</p>
+                                <ul style="color: black; list-style: none;">
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;P_{k}"
+                                                title="\large P_{k}" />: Lực kéo tiếp tuyến của ôtô</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;P_{f}"
+                                                title="\large P_{f}" />: Lực cản lăn</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;P_{i}"
+                                                title="\large P_{i}" />: Lực cản lên dốc</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;P_{W}"
+                                                title="\large P_{W}" />: Lực cản không khí</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;P_{j}"
+                                                title="\large P_{j}" />: Lực quán tính</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\large&space;P_{m}"
+                                                title="\large P_{m}" />: lực cản ở moóc kéo</p>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <hr style="border-top-color: #9c988b;">
+                        <p><strong>Xây dựng đồ thị cân bằng lực kéo của ôtô:</strong></p>
+                        <p><strong>B1:</strong> Tính tỷ số truyền lực chính</p>
+                        <div class="row">
+                            <div class="col-6" style="position: relative;">
+                                <p style="position: absolute;top: 50%;transform: translateY(-50%);"><img
+                                        src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;I_{0}=\frac{2\pi.r_{b}.n_{emax}}{60.{\color{Red}&space;I_{hn}}.{\color{Red}&space;I_{pc}}.v_{max}}"
+                                        title="\large I_{0}=\frac{2\pi.r_{b}.n_{emax}}{60.{\color{Red} I_{hn}}.{\color{Red} I_{pc}}.v_{max}}" />
+                                </p>
+
+                            </div>
+                            <div class="col-6">
+                                <p>Trong đó</p>
+                                <ul style="color: black;">
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;r_{b}"
+                                                title="\large r_{b}" />: Bán kính làm việc trung bình của bánh xe</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;n_{emax}"
+                                                title="\large n_{emax}" />: Tốc độ vòng quay max tại thời điểm Vmax</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;I_{hn}"
+                                                title="\large I_{hn}" />: Tỷ số truyền tại số lớn nhất</p>
+                                    </li>
+                                    <li>
+                                        <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;I_{pc}"
+                                                title="\large I_{pc}" />: Tỷ số truyền của hộp số phụ ở tay số cao</p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <p><strong>B2: </strong> Tính tỷ số truyền của tay số 1</p>
+                        <p><strong>Phân tích:</strong></p>
+                        <ul>
+                            <p>- Để có thể chuyển động được thì: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\large&space;P_{k}>P_{\psi&space;}&plus;P_{W}"
+                                    title="\large \large P_{k}>P_{\psi }+P_{W}" /> (<img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;P_{\psi&space;}"
+                                    title="\large P_{\psi }" />: Lực cản tổng cộng của đường), coi <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;P_{W}=0"
+                                    title="\large P_{W}=0" /></p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Rightarrow&space;\large&space;\large&space;P_{k}\geqslant&space;P_{\psi&space;}"
+                                    title="\large \Rightarrow \large \large P_{k}\geqslant P_{\psi }" /></p>
+                            <p>Vậy: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\frac{M_{emax}.I_{h1}.I_{0}.I_{pc}.\eta&space;_{tl}}{r_{b}}\geq&space;\psi&space;_{max}.G"
+                                    title="\large \frac{M_{emax}.I_{h1}.I_{0}.I_{pc}.\eta _{tl}}{r_{b}}\geq \psi _{max}.G" />
+                            </p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;\Rightarrow&space;I_{h1}\geq&space;\frac{\psi&space;_{max}.G.r_{b}}{M_{emax}.I_{0}.I_{pc}.\eta&space;_{tl}}"
+                                    title="\large \Rightarrow I_{h1}\geq \frac{\psi _{max}.G.r_{b}}{M_{emax}.I_{0}.I_{pc}.\eta _{tl}}" />
+                                (1)</p>
+                            <p></p>
+
+                            <p>- Điều kiện lực bám giữa bánh xe với mặt đường: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;P_{k}\leqslant&space;P_{\varphi&space;}"
+                                    title="\large P_{k}\leqslant P_{\varphi }" /></p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;\Rightarrow&space;\large&space;\frac{M_{emax}.I_{h1}.I_{0}.I_{pc}.\eta&space;_{tl}}{r_{b}}\leqslant&space;{\color{Red}&space;m}.G_{\varphi}.{\color{Red}&space;\varphi}"
+                                    title="\large \Rightarrow \large \frac{M_{emax}.I_{h1}.I_{0}.I_{pc}.\eta _{tl}}{r_{b}}\leqslant {\color{Red} m}.G_{\varphi}.{\color{Red} \varphi}" />
+                            </p>
+
+
+
+
+
+                        </ul>
+
+                        <ul style="color: black; list-style: none;">
+                            <p>Với:</p>
+
+                            <li>
+                                <p>m - hệ số phân bố lại tải trọng lên cầu chủ động khi xe chuyển động. Với cầu
+                                    sau chọn</p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;G_{\varphi&space;}"
+                                        title="\large G_{\varphi }" /> - Tải trọng thẳng đứng tác dụng lên bánh xe chủ
+                                    động</p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;\varphi"
+                                        title="\large \varphi" /> - Hệ số bám</p>
+                            </li>
+                            <p></p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;\Rightarrow&space;I_{h1}\leqslant&space;\frac{\varphi&space;.m.G_{\varphi&space;}.r_{b}}{M_{emax}.i_{pc}.\eta&space;_{tl}.I_{0}}"
+                                    title="\large \Rightarrow I_{h1}\leqslant \frac{\varphi .m.G_{\varphi }.r_{b}}{M_{emax}.i_{pc}.\eta _{tl}.I_{0}}" />
+                                (2)</p>
+                            <p>- Từ (1),(2) ta có điều kiện tính tỉ số truyền tại tay số 1</p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;{\color{Magenta}\Rightarrow&space;\frac{\psi&space;_{max}.G.r_{b}}{M_{emax}.I_{0}.I_{pc}.\eta&space;_{tl}}\leqslant&space;I_{h1}\leqslant&space;\frac{\varphi&space;.m.G_{\varphi&space;}.r_{b}}{M_{emax}.i_{pc}.\eta&space;_{tl}.I_{0}}}"
+                                    title="\large {\color{Magenta}\Rightarrow \frac{\psi _{max}.G.r_{b}}{M_{emax}.I_{0}.I_{pc}.\eta _{tl}}\leqslant I_{h1}\leqslant \frac{\varphi .m.G_{\varphi }.r_{b}}{M_{emax}.i_{pc}.\eta _{tl}.I_{0}}}" />
+                            </p>
+                            <p style="font-weight: bold;">- Nếu <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\large&space;I_{h1}"
+                                    title="\large I_{h1}" /> không thỏa mãn điều kiện thì phải chọn lại m</p>
+                        </ul>
+
+                        <p><strong>B3: </strong> Tính tỷ số truyền trong các tay số trung gian</p>
+                        <ul>
+                            <p>- Công bội được xác định theo biểu thức </p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\large&space;q=\left&space;(&space;\frac{I_{h1}}{I_{hn}}&space;\right&space;)^{\frac{1}{{\color{Red}&space;n}-1}}"
+                                    title="\large q=\left ( \frac{I_{h1}}{I_{hn}} \right )^{\frac{1}{{\color{Red} n}-1}}" />
+                            </p>
+                            <p> Với n - tay số cao nhất (VD: tay số 7 hay 7 cấp số)</p>
+                            <p></p>
+                            <p>- Tỷ số truyền trung gian được tính theo công thức:</p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\large&space;I_{hn}=\frac{I_{h1}}{q^{n-1}}"
+                                    title="\large I_{hn}=\frac{I_{h1}}{q^{n-1}}" /></p>
+                            <p>Ví dụ: Tỷ số truyền ở tay số 2: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;I_{h2}=\frac{I_{h1}}{q^{2-1}}"
+                                    title="\large I_{h2}=\frac{I_{h1}}{q^{2-1}}" /></p>
+                            <p>Tương tự với các tay số khác</p>
+                            <p style="color: black;">- Đối với tỷ số ở tay số lùi thì: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;I_{hl}=1,1I_{h1}"
+                                    title="\large I_{hl}=1,1I_{h1}" /> (Cần so sánh với điều kiện lực bám giữa bánh xe
+                                với mặt đường)</p>
+
+                        </ul>
+                        <p></p>
+                        <p><strong>B4: </strong>Phương trình cân bằng lực cản, và lực bám đường của xe</p>
+                        <ul>
+                            <p>- Phương trình cân bằng lực cản</p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\large&space;\large&space;P_{c}=&space;P_{f}&plus;P_{W}=f.G&plus;K.F.v^{2}"
+                                    title="\large \large P_{c}= P_{f}+P_{W}=f.G+K.F.v^{2}" /></p>
+                            <p>- Tính lực bám đường</p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;P_{\varphi&space;}=m.G_{\varphi&space;}.\varphi"
+                                    title="\large P_{\varphi }=m.G_{\varphi }.\varphi" /></p>
+
+                        </ul>
+                        <p><strong>B5: </strong>Thiết lập đồ thị cân bằng lực kéo của ôtô</p>
+                        <ul>
+                            <p>- Từ công thức:</p>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;P_{k}=\large&space;\frac{M_{e}.I_{hn}.I_{0}.I_{pc}.\eta&space;_{tl}}{r_{b}}"
+                                        title="\large P_{k}=\large \frac{M_{e}.I_{hn}.I_{0}.I_{pc}.\eta _{tl}}{r_{b}}" />
+                                </p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&amp;space;\large&amp;space;P_{c}=&amp;space;P_{f}+P_{W}=f.G+K.F.v"
+                                        title="\large P_{c}= P_{f}+P_{W}=f.G+K.F.v"></p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&amp;space;\large&amp;space;P_{\varphi&amp;space;}=m.G_{\varphi&amp;space;}.\varphi"
+                                        title="\large P_{\varphi }=m.G_{\varphi }.\varphi"></p>
+                            </li>
+                            <li>
+                                <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;V_{n}=\frac{2\pi&space;.r_{b}.n_{e}}{60.I_{0}.I_{hn}.P_{pc}}"
+                                        title="\large V_{n}=\frac{2\pi .r_{b}.n_{e}}{60.I_{0}.I_{hn}.P_{pc}}" /></p>
+                            </li>
+                            <p>Từ đó 3 công thức trên thiết lập đồ thị cân bằng lực kéo của ôtô</p>
+                            <p style="color: red;font-weight: bold;">- Những kí hiệu màu đỏ là giá trị cần nhập vào ô
+                                bên dưới.</p>
+
+                        </ul>
+
+
+
+
+
+
+
+
+
+                        <!-- ------ -->
+                        <button type="button" class="close hddtcblk" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                </div>
+                <p></p>
+                <div>
+                    <div class="row">
+
+                        <div class="col-6">
+                            <h4>Chọn thông số</h4>
+                            <p></p>
+                            <p></p>
+                            <form class="needs-validation was-validated">
+                                <div>
+                                    <label for="validationTooltip26">Số cấp động cơ (n)</label>
+                                    <input type="text" class="form-control" id="cap_dc"
+                                        placeholder="VD: Động cơ 7 cấp thì điền: 7" required="#">
+
+                                </div>
+                                <p></p>
+                                <div>
+                                    <label for="validationTooltip26">Tỷ số truyền tại tay số lớn nhất (<img
+                                            src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;I_{hn}"
+                                            title="\large I_{hn}" />)</label>
+                                    <input type="text" class="form-control" id="ty_so_tai_nmax"
+                                        placeholder="VD: Thường chon là 1" required="#">
+
+                                </div>
+                                <p></p>
+
+                                <div>
+                                    <label for="validationTooltip26">Tỷ số truyền của hộp số phụ tại tay số lớn nhất
+                                        (<img
+                                            src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;I_{pc}"
+                                            title="\large I_{hn}" />)</label>
+                                    <input type="text" class="form-control" id="ty_so_hsp_max"
+                                        placeholder="VD: Thường chon là 1" required="#">
+
+                                </div>
+                                <p></p>
+                                <div>
+                                    <label for="validationTooltip26">Hệ số phân bố lại tải trọng (m)</label>
+                                    <input type="text" class="form-control" id="he_so_pbtt_m" placeholder="VD: 1.1"
+                                        required="#">
+
+                                </div>
+                                <p></p>
+                                <div>
+                                    <label for="validationTooltip26">Hệ số bám (<img
+                                            src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\varphi"
+                                            title="\large \varphi" />)</label>
+                                    <input type="text" class="form-control" id="he_so_bam" placeholder="Xem hướng dẫn"
+                                        required="#">
+
+                                </div>
+                                <p></p>
+                                <div>
+                                    <label for="validationTooltip12">Cầu chủ động </label>
+
+                                    <select class="custom-select" id="cau_chu_dong" required="">
+                                        <option value="">Chọn cầu chủ động</option>
+                                        <option value="TH1">Cầu trước</option>
+                                        <option value="TH2">Cầu sau
+                                        </option>
+
+                                    </select>
+
+
+
+                                </div>
+                                <p></p>
+                                <div style="font-size: 1.2em;
+                                
+                                letter-spacing: 0.5px;">
+                                    <p>Hướng dẫn chọn hệ số bám:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Đường nhựa atphan và bê tông khô: <strong class="text-danger">0.8 -
+                                                    0.9</strong></p>
+                                        </li>
+                                        <li>
+                                            <p>Đường nhựa atphan ướt: <strong class="text-danger">0.5 - 0.7</strong></p>
+                                        </li>
+                                        <li>
+                                            <p>Đường bê tông ướt: <strong class="text-danger">0.75 - 0.8</strong></p>
+                                        </li>
+                                        <li>
+                                            <p>Đường đá dăm: <strong class="text-danger">0.55 - 0.65</strong></p>
+                                        </li>
+                                        <li>
+                                            <p>Đường đất khô: <strong class="text-danger">0.65 - 0.7</strong></p>
+                                        </li>
+                                        <li>
+                                            <p>Đường đất ướt: <strong class="text-danger">0.5 - 0.55</strong></p>
+                                        </li>
+                                        <li>
+                                            <p>Đường tuyết phủ: <strong class="text-danger">0.15 - 0.2</strong></p>
+                                        </li>
+                                        <li>
+                                            <p>Đường băng: <strong class="text-danger">0.1</strong></p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+
+
+                            </form>
+                            <div class="dkthongbao"
+                                style="width: 35%;position: fixed;top: 10px;left: 10px; z-index: 100;">
+                                <div class="loi">
+
+                                </div>
+                                <div class="laytruyenlucchinh">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <p style="text-align: right;"><img
+                                    style="width: 100%;box-shadow: 1px 1px 14px #0000ffd9;border-radius: 3px;"
+                                    src="img/tumblr_mobe.jpg" alt="#"></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tong">
+                <h3>III) Đồ thị nhân tố động lực học.
+                    <samp class="btn btn-warning hddtntdlh" style="display: inline;">Hướng dẫn</samp>
+                    <samp class="btn btn-outline-success kqntdlh" style="display: inline;"> kiết quả
+
+                    </samp>
+                </h3>
+
+                <br>
+
+
+            </div>
+            <div class="form">
+                <div class="kqnt_dong_luc_hoc frint alert alert-primary alert-dismissible fade show an">
+                    <div id="ket_qua_nt_dong_luc_hoc"></div>
+
+
+                </div>
+                <div class="hdtb an" style="font-size: 1.15em;">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <p><strong>Nhân tố động lực học:</strong></p>
+                        <p></p>
+                        <p><strong>Phân tích:</strong></p>
+                        <p></p>
+
+                        <p><strong>B1:</strong> Tính nhân tố động lực học ứng với mỗi tay số.</p>
+                        <ul>
+                            <P><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\large&space;D_{n}=\frac{P_{k}-P_{W}}{G}=\left&space;(&space;\frac{M_{e}.I_{hn}.I_{0}.I_{Pc}.\eta&space;_{tl}}{r_{b}}&space;-K.F.V_{n}^{2}\right&space;).\frac{1}{G}"
+                                    title="\large \large D_{n}=\frac{P_{k}-P_{W}}{G}=\left ( \frac{M_{e}.I_{hn}.I_{0}.I_{Pc}.\eta _{tl}}{r_{b}} -K.F.V_{n}^{2}\right ).\frac{1}{G}" />
+                            </P>
+                        </ul>
+                        <p><strong>B2:</strong> Nhân tố động lực học theo điều kiện bám</p>
+                        <ul>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;D_{\varphi&space;}=\frac{P_{\varphi&space;}-P_{W}}{G}=\left&space;(&space;m.\varphi&space;.G_{\varphi&space;}-K.F.V_{n}^{2}&space;\right&space;).\frac{1}{G}"
+                                    title="\large D_{\varphi }=\frac{P_{\varphi }-P_{W}}{G}=\left ( m.\varphi .G_{\varphi }-K.F.V_{n}^{2} \right ).\frac{1}{G}" />
+                            </p>
+                        </ul>
+                        <p><strong>B3:</strong> Để duy trì cho ôtô chuyển động, cần phải thõa mãn điều kiện</p>
+                        <ul>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;D_{\varphi&space;}\geq&space;D_{n}\geqslant&space;\psi"
+                                    title="\large D_{\varphi }\geq D_{n}\geqslant \psi" /></p>
+                            <p>Với:
+                                <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\psi&space;=f&plus;(tg\alpha&space;)"
+                                    title="\large \psi =f+(tg\alpha )" />: hệ số cản tổng cộng của đường</p>
+                            <p class="text-danger"><strong>Chú ý: </strong>Để cho bài toán đơn giản cho xe chạy trên
+                                đường bằng (<img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\alpha"
+                                    title="\large \alpha" />=0) <img
+                                    src="https://latex.codecogs.com/gif.latex?\large&space;\Rightarrow&space;\psi&space;=f=f_{0}.\left&space;(&space;1&plus;\frac{V^{2}}{1500}&space;\right&space;)"
+                                    title="\large \Rightarrow \psi =f=f_{0}.\left ( 1+\frac{V^{2}}{1500} \right )" />
+                            </p>
+
+
+                        </ul>
+
+                        <!-- ------- -->
+                        <button type="button" class="close cldlh" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-6" style="padding: 0px;">
+                        <div class="imgbg">
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-6" style="font-size: 1.2em;
+                    letter-spacing: 0.5px;">
+                        <h5>Nhân tố động lực học là gì:</h5>
+                        <ul>
+                            <p>- Nhân tố động lực học là tỷ số giữa hiệu số của lự kéo tiếp tuyến và lực cản của không
+                                khí với trọng lượng toàn bộ của ôtô</p>
+                            <p>- Để so sánh chất lượng động lực học kéo của ôtô có cùng giá trị lực kéo,nhưng lại có
+                                trọng lượng toàn bộ và kích thước, hình dạng khác nhau</p>
+                            <p class="text-danger"><strong>Phần này không cần nhập giá trị nào. Click hướng dẫn để xem
+                                    trình tự thiết lập</strong> </p>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- ------------- -->
+            <br>
+            <br>
+            <div class="tong">
+                <h3>IV) Đồ thị cân bằng công suất.
+                    <samp class="btn btn-warning hdcbcsdc" style="display: inline;">Hướng dẫn</samp>
+                    <samp class="btn btn-outline-success kqcbangcs" style="display: inline;"> kiết quả
+
+                    </samp>
+                </h3>
+
+                <br>
+
+
+            </div>
+            <div class="form">
+                <div class="kqcbcsdcc frint alert alert-primary alert-dismissible fade show an">
+                    <div id="ket_qua_can_bang_cong_suat_dc"></div>
+
+
+                </div>
+                <div class="hdndcbcsdc an">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="
+                    font-size: 1.15em;
+                ">
+                        <strong>Đồ thị cân bằng công suất động cơ</strong>
+                        <br>
+                        <br>
+                        <p><strong>B1:</strong> Tính công suất truyền đến bánh xe chủ động khi ở tay số thứ n:</p>
+
+                        <ul>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;N_{kn}=N_{e}.\eta&space;_{tl}"
+                                    title="\large N_{kn}=N_{e}.\eta _{tl}" /></p>
+
+                        </ul>
+                        <p><strong>B2:</strong> Tính công suất cản chuyển động (xét chuyển động trên đường bằng)</p>
+                        <ul>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\large&space;\sum&space;N_{c}=N_{f}&plus;N_{W}=G.f.V&plus;K.F.V^{3}"
+                                    title="\large \sum N_{c}=N_{f}+N_{W}=G.f.V+K.F.V^{3}" /></p>
+                        </ul>
+                        <p>Từ đó xây dựng đồ thị cân bằng công suất</p>
+                        <!-- ----------------------- -->
+                        <button type="button" class="close clhncbcsdc" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-6" style="padding: 0px;box-shadow: 1px 1px 14px #0000ffd9;border-radius: 3px;">
+                        <img style="width: 100%;border-radius: 3px;" src="img/lamborghini-vision-gran-turismo.jpg"
+                            alt="#">
+
+
+
+                    </div>
+                    <div class="col-6">
+
+                        <div class="text" style="font-size: 1.2em;
+                        letter-spacing: 0.5px;">
+                            <h5>Cân bằng công suất:</h5>
+
+                            <ul>
+                                <p>- Phương trình cân băng công suất của ôtô khi chuyển động có thể biểu thị ở dạng đồ
+                                    thị <img
+                                        src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;N_{K}=f(v)"
+                                        title="\large N_{K}=f(v)" /></p>
+
+                                <p class="text-danger"><strong>Phần này không cần nhập giá trị nào. Click hướng dẫn để
+                                        xem trình tự thiết lập</strong> </p>
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- -------------- -->
+            <br>
+            <br>
+            <div class="tong">
+                <h3>V) Đồ thị gia tốc của ôtô.
+                    <samp class="btn btn-warning hdgtot" style="display: inline;">Hướng dẫn</samp>
+                    <samp class="btn btn-outline-success kqgtot" style="display: inline;"> kiết quả
+
+                    </samp>
+                </h3>
+
+                <br>
+
+
+            </div>
+            <div class="form">
+                <div class="kqt_gia_toc frint alert alert-primary alert-dismissible fade show an">
+                    <div id="ket_qua_gia_tocdc"></div>
+                    <br>
+                    <div id="ket_qua_gia_tocnguoc"></div>
+
+
+
+                </div>
+                <div class="hdgtcdc an">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="
+                    font-size: 1.15em;
+                ">
+                        <strong>Gia tốc chuyển động</strong>
+                        <br>
+                        <p></p>
+                        <p><strong>Phân tích</strong></p>
+                        <p></p>
+
+                        <p>Từ công thức tính nhân tố động lực học:</p>
+                        <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\large&space;D=\psi&space;&plus;\frac{\delta&space;_{i}}{g}.J"
+                                title="\large \large D=\psi +\frac{\delta _{i}}{g}.J" /></p>
+                        <p>Trong đó:</p>
+                        <ul style="color: black;">
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\psi"
+                                    title="\large \psi" />: Hệ số cản tổng cộng (khi xét chuyển động trên đường bằng thì
+                                <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\psi&space;=f"
+                                    title="\large \psi =f" /> - Hệ số cản lăn)</p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\delta&space;_{i}"
+                                    title="\large \delta _{i}" />: Hệ số tính đến của các khối lượng chuyển động quay,
+                                <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\delta&space;_{i}=1,05&plus;0,05.I_{h}^{2}"
+                                    title="\large \delta _{i}=1,05+0,05.I_{h}^{2}" /></p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Rightarrow&space;J=(D-f).\frac{g}{\delta&space;_{i}}"
+                                    title="\large \Rightarrow J=(D-f).\frac{g}{\delta _{i}}" /></p>
+                        </ul>
+
+
+
+                        <!-- ---------------------- -->
+                        <button type="button" class="close clear_gtot" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-6" style="padding: 0px;box-shadow: 1px 1px 14px #0000ffd9;border-radius: 3px;">
+                        <img style="width: 100%;border-radius: 3px;" src="img/lambo-v12-vision-gran-turismo-2.jpg"
+                            alt="#">
+
+
+
+                    </div>
+                    <div class="col-6">
+
+                        <div class="text" style="font-size: 1.2em;
+                        letter-spacing: 0.5px;">
+                            <h5>Tính gia tốc ôtô:</h5>
+
+                            <ul>
+                                <p>- Bằng cách xây dựng đồ thị gia tốc chuyển động từ đó thể hiện khả năng tăng tốc của
+                                    ôtô</p>
+
+                                <p class="text-danger"><strong>Phần này không cần nhập giá trị nào. Click hướng dẫn để
+                                        xem trình tự thiết lập</strong> </p>
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="tong">
+                <h3>VI) Thời gian và quãng đường tăng tốc.
+                    <samp class="btn btn-warning hdtgqdtt" style="display: inline;">Hướng dẫn</samp>
+                    <samp class="btn btn-outline-success kqtgqdttot" style="display: inline;"> kiết quả
+
+                    </samp>
+                </h3>
+
+                <br>
+
+
+            </div>
+            <div class="form">
+
+                <div class="kqttt_thoi_gian_tt frint alert alert-primary alert-dismissible fade show an">
+                    <div id="ket_qua_vtqdtt" style="min-height: 500px;"></div>
+
+
+                </div>
+
+
+                <div class="hdtgttoto an" style="font-size: 1.15em;letter-spacing: 0.5px;">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Thời gian và quãng đường tăng tốc</strong>
+                        <br>
+                        <p></p>
+                        <p><strong>Phân tích</strong></p>
+                        <p></p>
+                        <p><strong>Phần I) Tính thời gian tăng tốc</strong></p>
+                        <ul>
+                            <p>Ta có: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;J=\frac{dv}{dt}\Rightarrow&space;dt=\frac{1}{J}.dv"
+                                    title="\large J=\frac{dv}{dt}\Rightarrow dt=\frac{1}{J}.dv" /> </p>
+                            <p>Xét thời gian tăng tốc của ô tô từ v1 đến v2: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;t=\int_{v1}^{v2}\left&space;(&space;\frac{1}{J}&space;\right&space;).dv"
+                                    title="\large t=\int_{v1}^{v2}\left ( \frac{1}{J} \right ).dv" /></p>
+                           
+                            
+                            <p>Vậy thời gian tăng tốc từ v1 dến v2 là: <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\large&space;\large&space;\Delta&space;t_{i}=\left&space;(&space;\frac{v_{i2}-v_{i1}}{2}&space;\right&space;).\left&space;(&space;\frac{1}{J_{i1}}&plus;\frac{1}{J_{i1}}&space;\right&space;)" title="\large \large \large \Delta t_{i}=\left ( \frac{v_{i2}-v_{i1}}{2} \right ).\left ( \frac{1}{J_{i1}}+\frac{1}{J_{i1}} \right )" /></p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Rightarrow"
+                                    title="\large \Rightarrow" /> Thời gian tăng tốc: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;t=\Delta&space;t_{1}&plus;\Delta&space;t_{2}&plus;\Delta&space;t_{3}&plus;...&plus;\Delta&space;t_{n}"
+                                    title="\large t=\Delta t_{1}+\Delta t_{2}+\Delta t_{3}+...+\Delta t_{n}" /></p>
+                            <p class="text-danger"><strong>Chú ý: Đối với hệ thống truyền lực của ô tô với hộp số có
+                                    cấp, thời gian chuyển từ số
+                                    thấp lên số cao có xảy ra giảm vận tốc chuyển động của ô tô 1 khoảng là </strong><i
+                                    style="color: black;"><img
+                                        src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Delta&space;v=\psi&space;.g.\frac{t_{c}}{\delta&space;_{i}}&space;(t_{c}:"
+                                        title="\large \Delta v=\psi .g.\frac{t_{c}}{\delta _{i}} (t_{c}:" />thời gian
+                                    chuyển số)</i></p>
+                            <hr style="border-top-color: #9c988b;">
+
+
+                        </ul>
+                        <br>
+                        <p><strong>Phần II) Tính quãng đường tăng tốc</strong></p>
+                        <ul>
+                            <p>Ta có: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;v=\frac{ds}{dt}\Rightarrow&space;ds=v.dt"
+                                    title="\large v=\frac{ds}{dt}\Rightarrow ds=v.dt" /></p>
+                            <p>Như vậy quãng đường tăng tốc của ô tô từ v1 đến v2 là: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;s=\int_{v1}^{v2}\left&space;v.dt"
+                                    title="\large s=\int_{v1}^{v2}\left v.dt" /></p>
+                            <p>Tích phân này cũng không giải được bằng giải tích vì vậy chúng ta lại áp dụng
+                                phương pháp đồ thị tương tự trên, dựa vào đồ thị t-v vừa lập được.</p>
+                            <p>Chia đường cong thời gian tăng tốc ra nhiều đoạn nhỏ và thừa nhận rằng trong
+                                mỗi khoảng thay đổi tốc độ ứng với từng đoạn này ô tô chuyển động đều với vận tốc
+                                trung bình là:</p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Rightarrow&space;v_{tb}=\frac{v_{i1}&plus;v_{i2}}{2}"
+                                    title="\large \Rightarrow v_{tb}=\frac{v_{i1}+v_{i2}}{2}" /></p>
+                            <p>Lúc đó quãng đường xe đi được trong mỗi khoảng sẽ là: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Delta&space;s_{i}=v_{tb}.\Delta&space;t_{i}"
+                                    title="\large \Delta s_{i}=v_{tb}.\Delta t_{i}" /></p>
+                            <p><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Rightarrow"
+                                    title="\large \Rightarrow" /> Quãng đường tăng tốc là: <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\large&space;s=\Delta&space;s_{1}&plus;\Delta&space;s_{2}&plus;\Delta&space;s_{3}&plus;...&plus;\Delta&space;s_{n}" title="\large \large s=\Delta s_{1}+\Delta s_{2}+\Delta s_{3}+...+\Delta s_{n}" /></p>
+                            <p class="text-danger"><strong>Chú ý: Sau mỗi khi sang số ta phải cộng thêm quãng đường đi
+                                    được trong thời gian
+                                    chuyển số. Quãng đường đi được trong thời gian chuyển số được tính theo công thức:
+                                </strong><i style="color: black;"><img
+                                        src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\large&space;s_{ci}=v_{i}.t_{c}&space;(v_{i}:"
+                                        title="\large \large s_{ci}=v_{i}.t_{c} (v_{i}:" />vận tốc lớn nhất
+                                    của ô tô ứng với tay số trước khi sang số.)</i></p>
+                            <hr style="border-top-color: #9c988b;">
+
+
+                        </ul>
+                        <p><strong>Nếu tính thêm lực cản không khí thì: </strong></p>
+
+                        <br>
+                        <ul>
+                            <p>Độ giảm vận tốc: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\Delta&space;v=\left&space;(&space;\frac{P_{\psi&space;}&plus;P_{W}}{G}&space;\right&space;).g.\frac{t_{c}}{\delta&space;_{i}}=\left&space;(&space;\psi&space;&plus;\frac{K.F.v_{i}^{2}}{G}&space;\right&space;).g.\frac{t_{c}}{\delta&space;_{i}}"
+                                    title="\large \Delta v=\left ( \frac{P_{\psi }+P_{W}}{G} \right ).g.\frac{t_{c}}{\delta _{i}}=\left ( \psi +\frac{K.F.v_{i}^{2}}{G} \right ).g.\frac{t_{c}}{\delta _{i}}" />
+                            </p>
+                            <p></p>
+                            <p>Quãng đường đi được trong khi chuyển số: <img
+                                    src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;s_{ci}=\left&space;[&space;v_{i}-(\psi&space;&plus;\frac{K.F.v_{i}^{2}}{G}).t_{c}&space;\right&space;].t_{c}"
+                                    title="\large s_{ci}=\left [ v_{i}-(\psi +\frac{K.F.v_{i}^{2}}{G}).t_{c} \right ].t_{c}" />
+                            </p>
+                        </ul>
+
+                        <!-- ----------------- -->
+                        <button type="button" class="close clohdttot" aria-label="Close">
+
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12"
+                        style="width: 100%;height: 22em; display: block;border-radius: 3px;box-shadow: 1px 1px 14px #0000ffd9;padding: 0px;position: relative;border-radius: 3px;">
+                        <div class="imgbr"
+                            style="background-image: url(img/lamborghini-aventador-s-by-novitectopp.jpg);width: 100%;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;height: 100%;border-radius: 3px;">
+
+
+
+                        </div>
+                        <div class="textkk"
+                            style="position: absolute;bottom: 0px;left: 0px;background-color: #1b242b;width: 100%;height: 9em;width: 100%;">
+
+                            <form class="needs-validation was-validated form-row" style="color: blanchedalmond;position: absolute;
+                            top: 50%;
+                            left: 3%;
+                            transform: translateY(-50%);width: 100%;">
+                                <div class="col-6">
+                                    <div>
+                                        <label for="validationTooltip26">Thời gian chuyển số</label>
+                                        <input type="text" class="form-control" id="thoi_gian_chuyen_so"
+                                            placeholder="Xem hướng dẫn" required="#">
+
+                                    </div>
+                                    <p></p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Áp dụng thêm lực tác dụng
+                                            của không khí</label>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="col-5" style="color: white;font-size: 1.2em;">
+                                    <br>
+                                    <p style="padding-left: 12px;letter-spacing: 0.5px;">Thời gian chuyển số, tùy trình
+                                        độ người lái xe, chọn tc = 0,5 ÷ 3 (s)</p>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+        </div>
+        <!-- phần  tỉ số truyền của hệ thống truyền  -->
+
+
+
+
+    </article>
+    <br>
+
+
+    <article class="nutsl">
+        <div class="sldl1 form">
+            <button style="width: 100%;
+            font-size: 20px;
+            font-weight: 400;" class="btn btn-primary" id="sldl1">Sử lý, cập nhật dữ liệu</button>
+        </div>
+
+        <div class="sldl1" style="position: fixed;top: 70%;
+        cursor: pointer;right: 4em;">
+            <p>
+
+                <svg class="svg2 sldl1" xmlns="http://www.w3.org/2000/svg" width="65" height="74"
+                    style="fill: #ee675c; zoom: 1.2;z-index: 10000;">
+
+
+                    <path fill-rule="evenodd"
+                        d="M64.543 7.293l-.179 60.641c-.202 3.407-3.093 6.003-6.458 5.798a6.05 6.05 0 0 1-2.686-.817L3.607 42.751c-2.92-1.706-3.92-5.485-2.234-8.44a6.149 6.149 0 0 1 1.923-2.067l51.79-30.477c2.814-1.88 6.6-1.096 8.458 1.751a6.236 6.236 0 0 1 .999 3.775z">
+                    </path>
+                </svg>
+
+            </p>
+
+
+        </div>
+        <br>
+        <div class="thongbao" style="width: 40%;position: fixed;top: 10px;right: 10px;z-index: 100;">
+            <div class="tb1 el">
+                <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Thiếu dữ liệu!</strong> kiểm tra phần Điền các kích thước cơ bản của xe.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> -->
+            </div>
+            <!-- ------------ -->
+            <div class="tb2 el">
+
+            </div>
+            <div class="tb3 el">
+
+            </div>
+
+            <div class="tb4 el">
+
+            </div>
+            <div class="tb5 el">
+
+            </div>
+
+            <div class="tb6 el">
+
+            </div>
+            <div class="tb7 el">
+
+            </div>
+            <div class="tb8 el">
+                
+
+            </div>
+            <div class="tb9 el">
+                
+            </div>
+            <div class="goi_y_fo el">
+                
+
+            </div>
+
+        </div>
+
+    </article>
+
+    <footer>
+        <div class="footerr">
+            <div class="row">
+                <div class="col-6">
+                    <div class="logo">
+                        <p><a href="#">LOGO</a></p>
+                    </div>
+
+                </div>
+                <div class="col-6" style="
+                letter-spacing: 0.5px;color: white;
+    font-size: 1.2em;position: relative;">
+                    <div class="tex" style="position: absolute;
+    top: 50%;
+    transform: translateY(-50%);">
+                        <ul>
+                            <li>
+                                <p>Web này giúp bạn chọn thông số, kiểm nghiệm kết quả dễ dàng hơn trong môn học lý
+                                    thuyết ô tô</p>
+                            </li>
+                            <li>
+                                <p>Mọi ý kiến đóng góp xin <strong class="text-danger"><a href="">Click vào
+                                            đây</a></strong></p>
+                            </li>
+                            <p>Cảm ơn bạn đã quan tâm, và sử dụng.</p>
+                        </ul>
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        <div class="bq" style="background-color: #18ae91;">
+            <hr style="margin: 0px;background-color: #2ee0bd;">
+            <p style="margin: 0px;color: white;text-align: center;letter-spacing: 0.5px;">Copyright © 2020, Designed by
+                HoangLap </p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            var ktmh = screen.width;
+
+            if (ktmh > 1750) {
+                var khoang = (ktmh - 1750) / 2 + 40;
+                $(".sldl1").css("right", khoang + "px");
+
+            }
+
+        });
+    </script>
+
+
+
+</body>
+
+
+
+
+</html>
