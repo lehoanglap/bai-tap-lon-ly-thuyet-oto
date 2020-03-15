@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     //lay du lieu dac tinh ngoai
     var thong_so_abc = $("#hesoabc").val();
-    var he_so_can_tong_cong = Number($("#hscantc").val());
+    var he_so_can_tong_cong_max = Number($("#hscantc").val());
     var he_so_lamda = Number($("#tisolamda").val());
     var toc_do_vong_quay = Number($("#csvquay").val());
     //lay du lieu dac tinh ngoai
@@ -92,14 +92,14 @@ $(document).ready(function () {
     // var khoang_sang_gam_xe_H1 = 219;
     // var goc_thoat_truoc_γ1 = 29;
     // var goc_thoat_sau_γ2 = 25;
-    // var van_toc_max_Vmax = 180;
+    // var van_toc_max_Vmax = 210;
     // //------------------------------
     // var trong_luong_ban_than = 1865;
-    // var trong_luong_hanh_khach = 60;
+    // var trong_luong_hanh_khach = 70;
     // var trong_luong_hanh_ly = 20;
     // var hieu_suat_truyen_luc = 0.9;
     // var he_so_cac_khong_khi = 0.25;
-    // var he_so_can_lan_fo =  0.0185;
+    // var he_so_can_lan_fo =  0.01;
     // //-------------------------
     // var he_so_dien_tich_can_chinh_dien = 0.78;
     // var chieu_rong_mat_lop = 265;
@@ -107,14 +107,14 @@ $(document).ready(function () {
     // var duong_kinh_vanh_xe = 17;
     // var he_so_bien_dang_lop = 0.94
     // //------------------------
-    // var so_cho_tren_o_to = 6;
+    // var so_cho_tren_o_to = 4;
     // var phan_tram_luc_cau_truoc = 55;
     // var phan_tram_luc_cau_sau = 45;
     // //-------------------------
     // var thong_so_abc = 'TH1';
-    // var he_so_can_tong_cong = 0.05;
+    // var he_so_can_tong_cong_max = 0.4;
     // var he_so_lamda = 1.1;
-    // var toc_do_vong_quay = 5600;
+    // var toc_do_vong_quay = 5200;
     // //------------------------
     // var cap_dc = 7;
     // var ty_so_tai_nmax = 1;
@@ -123,7 +123,7 @@ $(document).ready(function () {
     // var he_so_bam = 0.9;
     // var cau_chu_dong = "TH2";
     // //-------------------------
-    // var thoi_gian_chuyen_so = 1.5;
+    // var thoi_gian_chuyen_so = 2;
     //=============================================
     //====================================================
 
@@ -542,6 +542,7 @@ $(document).ready(function () {
     //---------------------------------------
 
     // dac tinh toc do ngoai
+    var he_so_can_tong_cong=he_so_can_lan_fo * (1 + (Math.pow(Vmax_m_s, 2) / 1500))
 
     var data_duong_dac_tinh_toc_do_ngoai = [];
 
@@ -674,10 +675,12 @@ $(document).ready(function () {
       //-------tính công suất----
       var cong_suat_max_do_thi = cong_suat_cuc_dai_Ne * 1.1
       var cong_suat_max_do_thi = Math.round(cong_suat_max_do_thi * 1000) / 1000;
+      var do_doc_du_doan=(Math.atan((he_so_can_tong_cong_max-he_so_can_lan_fo)))*(180/Math.PI)
+      var do_doc_du_doan=Math.round(do_doc_du_doan * 1000) / 1000
       //-------end tính công suất----
 
       //-----in ket quả đặc tính ngoài của dộng cơ
-      $(".kqtdndc").html('<div class="kqcsmn frint1 alert alert-primary alert-dismissible fade show"><p style="font-size: 1.3em;">kết quả tính công suất, momen động cơ</p><ul style="font-size: 1.3em;"><li><p>Công suất lớn nhất: ' + cong_suat_max_do_thi + ' Kw</p></li><li><p>Momen lớn nhất: ' + momen_Me_max_do_thi + ' N.m</p></li></ul><p></p><div id="bdtdngoai"></div></div>');
+      $(".kqtdndc").html('<div class="kqcsmn frint1 alert alert-primary alert-dismissible fade show"><p style="font-size: 1.3em;">kết quả tính công suất, momen động cơ</p><ul style="font-size: 1.3em;"><li><p>Công suất lớn nhất: ' + cong_suat_max_do_thi + ' Kw</p></li><li><p>Momen lớn nhất: ' + momen_Me_max_do_thi + ' N.m</p></li><li><p>Độ dốc dự đoán xe đi được: ' + do_doc_du_doan + ' Độ</p></li></ul><p></p><div id="bdtdngoai"></div></div>');
 
       //-----end in ket quả đặc tính ngoài của dộng cơ
 
@@ -1047,6 +1050,12 @@ $(document).ready(function () {
       //-------------------------------------------------------
       //---------------------------------------------------------
       //---------------------------------------------------------
+      //goc lon nhat
+      var goc_ampha=Math.atan( [(momen_Me_max_do_thi*ty_so_truyen_cac_so[0]*ty_so_truyen_luc_chinh*hieu_suat_truyen_luc)/(ban_kinh_dong_luc_hoc_rđ*trong_luong_G/1000)]-he_so_can_lan_fo )*(180/Math.PI);
+      var goc_ampha=Math.round(goc_ampha * 10000) / 10000.
+      $(".goc_ampha p").html("Độ dốc tính toán mà xe có thể đi được là: " +goc_ampha+" Độ");
+      
+      //----------
 
       //su ly du lieu do thi
 
@@ -1353,7 +1362,8 @@ $(document).ready(function () {
 
             var data_gia_toc = (nt_dong_luc_hoc[i][i1] - (he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[i][i1], 2) / 1500)))) * (9.81 / hs_cd_quay[i]);
 
-            if (data_gia_toc <= 0.009 && data_gia_toc >= 0) {
+            if (Math.abs(data_gia_toc) <= 0.0095) {
+              
               data_gia_toc = 0;
               dd_gia_toc.push(data_gia_toc);
 
@@ -1493,12 +1503,10 @@ $(document).ready(function () {
       $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại Phương trình cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
     }
     //goi y chon fo
-    var goi_y_fo_min = [nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length - 1] - (0.009 * hs_cd_quay[hs_cd_quay.length - 1] / 9.81)] / [(1 + (Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length - 1], 2) / 1500))];
-    //---------------
-    var goi_y_fo_max = [nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length - 1] - (0.0 * hs_cd_quay[hs_cd_quay.length - 1] / 9.81)] / [(1 + (Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length - 1], 2) / 1500))];
+    
 
     if (gia_toc_cd[cap_dc - 1][phan - 1] != 0) {
-      $(".goi_y_fo").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><p><strong>Giá trị tính toán gia tốc tại vận tốc max (đã làm tròn) phải bằng 0 </strong></p> <p>kiểm tra và chọn lại thông số.</p><p><strong>Gợi ý</strong></p><ul><p>Chọn lại hệ số cản lăn fo (phải thỏa mãn điều kiện theo từng loại đường) - thường chọn giá trị nhỏ nhất</p><li><p>Giá trị bé nhất của hệ số cản lăn: ' + goi_y_fo_min + '</p></li><li><p>Giá trị lớn nhất của hệ số cản lăn: ' + goi_y_fo_max + '</p></li></ul><button type="button" class="close" data-dismiss="alert"aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+      $(".goi_y_fo").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><p><strong>Giá trị tính toán gia tốc tại vận tốc max (đã làm tròn) phải bằng 0 </strong></p> <p>kiểm tra và chọn lại thông số.</p><p><strong>Gợi ý</strong></p><ul><p>Chọn lại hệ số cản lăn fo (phải thỏa mãn điều kiện theo từng loại đường)</p></ul><button type="button" class="close" data-dismiss="alert"aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
     }
 
 
@@ -1953,10 +1961,7 @@ $(document).ready(function () {
       var gia_tri_tang_toc = {
         van_toc_xet_95: van_toc_xet,
         gia_toc_nguoc_xet_95: gia_toc_xet,
-        goi_y_fo: {
-          max: goi_y_fo_max,
-          min: goi_y_fo_min
-        },
+        
         van_toc_max_tung_tay_so: van_toc_max_tay_so,
         do_giam_van_toc: do_giam_van_toc,
         quang_duong_khi_sang_so: quang_duong_khi_sang_so,
@@ -1993,8 +1998,11 @@ $(document).ready(function () {
 
 
     //---------------------------
-    //-------------------------------------
+    //-------------------------------------Math.round( he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[cap_dc-1][phan-1], 2) / 1500))* 100) / 100.
     console.log(DATA_CAR);
+    
+    
+    
     
     
 
