@@ -83,47 +83,47 @@ $(document).ready(function () {
     //=============================================
     //=================================================
 
-    // var chieu_dai_toan_bo_Lo = 4795;
-    // var chieu_rong_toan_bo_Bo = 1855;
-    // var chieu_cao_toan_bo_Ho = 1835;
-    // var chieu_dai_co_so_L = 2745;
-    // var vet_banh_truoc_B1 = 1545;
-    // var vet_banh_sau_B2 = 1550;
-    // var khoang_sang_gam_xe_H1 = 219;
+    // var chieu_dai_toan_bo_Lo = 3795;
+    // var chieu_rong_toan_bo_Bo = 1665;
+    // var chieu_cao_toan_bo_Ho = 1510;
+    // var chieu_dai_co_so_L = 2450;
+    // var vet_banh_truoc_B1 = 1430;
+    // var vet_banh_sau_B2 = 1415;
+    // var khoang_sang_gam_xe_H1 = 160;
     // var goc_thoat_truoc_γ1 = 29;
     // var goc_thoat_sau_γ2 = 25;
-    // var van_toc_max_Vmax = 210;
+    // var van_toc_max_Vmax = 170;
     // //------------------------------
-    // var trong_luong_ban_than = 1865;
+    // var trong_luong_ban_than = 830;
     // var trong_luong_hanh_khach = 70;
     // var trong_luong_hanh_ly = 20;
     // var hieu_suat_truyen_luc = 0.9;
-    // var he_so_cac_khong_khi = 0.25;
-    // var he_so_can_lan_fo =  0.01;
+    // var he_so_cac_khong_khi = 0.2;
+    // var he_so_can_lan_fo =  0.02;
     // //-------------------------
     // var he_so_dien_tich_can_chinh_dien = 0.78;
-    // var chieu_rong_mat_lop = 265;
-    // var ti_le_H_B = 65;
-    // var duong_kinh_vanh_xe = 17;
+    // var chieu_rong_mat_lop = 175;
+    // var ti_le_H_B = 55;
+    // var duong_kinh_vanh_xe = 15;
     // var he_so_bien_dang_lop = 0.94
     // //------------------------
-    // var so_cho_tren_o_to = 4;
+    // var so_cho_tren_o_to = 5;
     // var phan_tram_luc_cau_truoc = 55;
     // var phan_tram_luc_cau_sau = 45;
     // //-------------------------
     // var thong_so_abc = 'TH1';
     // var he_so_can_tong_cong_max = 0.4;
-    // var he_so_lamda = 1.1;
-    // var toc_do_vong_quay = 5200;
+    // var he_so_lamda = 1.3;
+    // var toc_do_vong_quay = 5300;
     // //------------------------
-    // var cap_dc = 7;
+    // var cap_dc = 5;
     // var ty_so_tai_nmax = 1;
     // var ty_so_hsp_max = 1;
     // var he_so_pbtt_m = 1.1;
     // var he_so_bam = 0.9;
-    // var cau_chu_dong = "TH2";
+    // var cau_chu_dong = "TH1";
     // //-------------------------
-    // var thoi_gian_chuyen_so = 2;
+    // var thoi_gian_chuyen_so = 1;
     //=============================================
     //====================================================
 
@@ -609,10 +609,10 @@ $(document).ready(function () {
 
 
       //----phan tỉ so lamda
-      var phan = Math.floor(he_so_lamda / 0.1);
+      var phan =(he_so_lamda / 0.1);
       var MIN_val_lamda = [];
-      for (let i1 = 1; i1 <= phan; i1++) {
-        var min_lamda = Math.round(i1 * 0.1 * 1000) / 1000;
+      for (let i1 = 1; i1 < phan+1; i1++) {
+        var min_lamda = Math.round(i1 * 0.1 * 100) / 100;
         MIN_val_lamda.push(min_lamda);
 
       }
