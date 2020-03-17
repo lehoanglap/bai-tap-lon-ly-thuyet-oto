@@ -98,8 +98,8 @@ $(document).ready(function () {
     // var trong_luong_hanh_khach = 70;
     // var trong_luong_hanh_ly = 20;
     // var hieu_suat_truyen_luc = 0.9;
-    // var he_so_cac_khong_khi = 0.2;
-    // var he_so_can_lan_fo =  0.02;
+    // var he_so_cac_khong_khi = 0.25;
+    // var he_so_can_lan_fo =  0.015;
     // //-------------------------
     // var he_so_dien_tich_can_chinh_dien = 0.78;
     // var chieu_rong_mat_lop = 175;
@@ -119,7 +119,7 @@ $(document).ready(function () {
     // var cap_dc = 5;
     // var ty_so_tai_nmax = 1;
     // var ty_so_hsp_max = 1;
-    // var he_so_pbtt_m = 1.1;
+    // var he_so_pbtt_m = 1.2;
     // var he_so_bam = 0.9;
     // var cau_chu_dong = "TH1";
     // //-------------------------
@@ -1503,10 +1503,12 @@ $(document).ready(function () {
       $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại Phương trình cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
     }
     //goi y chon fo
-    
+    var goi_f1=nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]/(1+[Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2)]/1500);
+    var goi_f2=[nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0095*hs_cd_quay[hs_cd_quay.length-1]/9.81)]/[1+([Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2)]/1500)]
+    //-------------------
 
     if (gia_toc_cd[cap_dc - 1][phan - 1] != 0) {
-      $(".goi_y_fo").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><p><strong>Giá trị tính toán gia tốc tại vận tốc max (đã làm tròn) phải bằng 0 </strong></p> <p>kiểm tra và chọn lại thông số.</p><p><strong>Gợi ý</strong></p><ul><p>Chọn lại hệ số cản lăn fo (phải thỏa mãn điều kiện theo từng loại đường)</p></ul><button type="button" class="close" data-dismiss="alert"aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+      $(".goi_y_fo").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><p><strong>Giá trị tính toán gia tốc tại vận tốc max (đã làm tròn) phải bằng 0 </strong></p> <p>kiểm tra và chọn lại thông số.</p><p><strong>Gợi ý</strong></p><ul><p>Chọn lại hệ số cản lăn fo (phải thỏa mãn điều kiện theo từng loại đường) - lấy giá trị fo trong khoảng MAX - MIN</p><li style="font-weight: bold;">Giá trị fo Min: <strong class="text-danger">'+goi_f2+'</strong></li><li style="font-weight: bold;">Giá trị fo Max: <strong class="text-danger">'+goi_f1+'</strong></li></ul><button type="button" class="close" data-dismiss="alert"aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
     }
 
 
@@ -1999,7 +2001,9 @@ $(document).ready(function () {
 
     //---------------------------
     //-------------------------------------Math.round( he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[cap_dc-1][phan-1], 2) / 1500))* 100) / 100.
-    console.log(DATA_CAR);
+    
+    //console.log(DATA_CAR);
+    
     
     
     
