@@ -352,11 +352,14 @@ $(".kqtdn").click(function (e) {
     
   });
 
-  //////////////////
-  
-  
+  $(".dong_goi_y").click(function (e) { 
+    e.preventDefault();
+    
+    $(".laytruyenlucchinh").removeClass("hien");
+    
+  });
 
-  ///////
+  
 
 });
 

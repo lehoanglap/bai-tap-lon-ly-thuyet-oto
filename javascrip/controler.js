@@ -99,7 +99,7 @@ $(document).ready(function () {
     // var trong_luong_hanh_ly = 20;
     // var hieu_suat_truyen_luc = 0.9;
     // var he_so_cac_khong_khi = 0.25;
-    // var he_so_can_lan_fo =  0.015;
+    // var he_so_can_lan_fo =  0.02;
     // //-------------------------
     // var he_so_dien_tich_can_chinh_dien = 0.78;
     // var chieu_rong_mat_lop = 175;
@@ -108,13 +108,13 @@ $(document).ready(function () {
     // var he_so_bien_dang_lop = 0.94
     // //------------------------
     // var so_cho_tren_o_to = 5;
-    // var phan_tram_luc_cau_truoc = 55;
-    // var phan_tram_luc_cau_sau = 45;
+    // var phan_tram_luc_cau_truoc = 60;
+    // var phan_tram_luc_cau_sau = 40;
     // //-------------------------
     // var thong_so_abc = 'TH1';
     // var he_so_can_tong_cong_max = 0.4;
-    // var he_so_lamda = 1.3;
-    // var toc_do_vong_quay = 5300;
+    // var he_so_lamda = 1.1;
+    // var toc_do_vong_quay = 6000;
     // //------------------------
     // var cap_dc = 5;
     // var ty_so_tai_nmax = 1;
@@ -123,7 +123,7 @@ $(document).ready(function () {
     // var he_so_bam = 0.9;
     // var cau_chu_dong = "TH1";
     // //-------------------------
-    // var thoi_gian_chuyen_so = 1;
+    // var thoi_gian_chuyen_so = 1.5;
     //=============================================
     //====================================================
 
@@ -844,9 +844,14 @@ $(document).ready(function () {
 
       //xet tim tay so 1
       if (dk_can < dk_bam) {
-        var ty_so_tay_1 = dk_bam;
-        var ty_so_tay_1 = Math.round(ty_so_tay_1 * 1000) / 1000;
-        $(".dkthongbao .laytruyenlucchinh").html(' <div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Tốt Điều kiện cản nhỏ hơn điều kiện bám đường!</strong><p>Máy tự chọn trong khoảng điều kiện</p><div><label for="validationTooltip26">Tỷ số truyền tại tay số 1 là:<strong class="text-danger"> ' + ty_so_tay_1 + '</strong> </label><p></p><p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li><li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong></li></ul></div><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
+        $(".laytruyenlucchinh").addClass("hien");
+        
+        
+        //$(".dkthongbao .laytruyenlucchinh").html(' <div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Tốt Điều kiện cản nhỏ hơn điều kiện bám đường!</strong><p>Máy tự chọn trong khoảng điều kiện</p><div><form class="needs-validation was-validated form-row"><label for="validationTooltip26">Tỷ số truyền tại tay số 1 là:</label><input type="text" class="form-control" id="ty_so_tay_1" placeholder="Bạn tự chọn" required="#"> </form><p></p><p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li><li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong></li> </ul></div><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
+
+        $("#gta_tri_dieu_kien").html('<p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li> <li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong>  </li></ul>');
+
+        
 
 
 
@@ -858,9 +863,10 @@ $(document).ready(function () {
 
 
       }
-      //xet tim tay so 1
+      var ty_so_tay_1= $("#ty_so_tay_1").val();
 
-      //tinh cong boi
+      if (ty_so_tay_1 != "") {
+        //tinh cong boi
       var cong_boi = Math.pow((ty_so_tay_1 / ty_so_tai_nmax), 1 / (cap_dc - 1));
       var cong_boi = Math.round(cong_boi * 1000) / 1000;
       //end tinh cong boi
@@ -1500,7 +1506,7 @@ $(document).ready(function () {
       //----------------------------------
 
     } else {
-      $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại Phương trình cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+      $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại Phương trình cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô. Hoặc bạn chưa chọn tỷ số truyền tại tay số 1 <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
     }
     //goi y chon fo
     var goi_f1=nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]/(1+[Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2)]/1500);
@@ -2002,7 +2008,7 @@ $(document).ready(function () {
     //---------------------------
     //-------------------------------------Math.round( he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[cap_dc-1][phan-1], 2) / 1500))* 100) / 100.
     
-    //console.log(DATA_CAR);
+    console.log(DATA_CAR);
     
     
     
@@ -2010,6 +2016,13 @@ $(document).ready(function () {
     
     
 
+        
+      }
+     
+      
+      
+
+      
 
     //end code-------------------
     //--------Hoang Lap--------------------
