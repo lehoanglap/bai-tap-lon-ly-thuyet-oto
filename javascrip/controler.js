@@ -863,7 +863,8 @@ $(document).ready(function () {
 
 
       }
-      var ty_so_tay_1= $("#ty_so_tay_1").val();
+      
+      var ty_so_tay_1= Number($("#ty_so_tay_1").val());
 
       if (ty_so_tay_1 != "") {
         //tinh cong boi
