@@ -126,7 +126,12 @@ $(document).ready(function () {
     // var thoi_gian_chuyen_so = 1.5;
     //=============================================
     //====================================================
+    //====================VD2=============================
+
     
+    //=============================================
+    //ty so truyen tay 1: 2.27
+    //====================================================
 
 
 
@@ -611,6 +616,7 @@ $(document).ready(function () {
 
       //----phan tỉ so lamda
       var phan =(he_so_lamda / 0.1);
+      var phan=Math.round( phan ) ;
       var MIN_val_lamda = [];
       for (let i1 = 1; i1 < phan+1; i1++) {
         var min_lamda = Math.round(i1 * 0.1 * 100) / 100;
@@ -2015,6 +2021,8 @@ $(document).ready(function () {
     //-------------------------------------Math.round( he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[cap_dc-1][phan-1], 2) / 1500))* 100) / 100.
     
     console.log(DATA_CAR);
+    
+    
     
     
     
