@@ -126,6 +126,7 @@ $(document).ready(function () {
     // var thoi_gian_chuyen_so = 1.5;
     //=============================================
     //====================================================
+    
 
 
 
@@ -542,7 +543,7 @@ $(document).ready(function () {
     //---------------------------------------
 
     // dac tinh toc do ngoai
-    var he_so_can_tong_cong=he_so_can_lan_fo * (1 + (Math.pow(Vmax_m_s, 2) / 1500))
+    var he_so_can_tong_cong=he_so_can_lan_f;
 
     var data_duong_dac_tinh_toc_do_ngoai = [];
 
@@ -603,7 +604,7 @@ $(document).ready(function () {
       //----cong xuat can thiet
 
       var cong_suat_can_thiet = (1 / hieu_suat_truyen_luc) * (trong_luong_G * he_so_can_tong_cong * Vmax_m_s + he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(Vmax_m_s, 3)) / 1000;
-      var cong_suat_can_thiet = Math.round(cong_suat_can_thiet * 10000 + Number.EPSILON) / 10000.
+      var cong_suat_can_thiet = Math.round(cong_suat_can_thiet * 1000) / 1000.
 
       //---end cong suat can thiet
 
@@ -659,7 +660,7 @@ $(document).ready(function () {
       //tinh momen xoan
       var data_momen_Me_N_m = [];
       for (let t2 = 0; t2 < MIN_val_lamda.length; t2++) {
-        var momen_Me_N_m = 9500 * (data_cong_suat_Ne[t2] / data_toc_do_ne[t2]);
+        var momen_Me_N_m = 9550 * (data_cong_suat_Ne[t2] / data_toc_do_ne[t2]);
         var momen_Me_N_m = Math.round(momen_Me_N_m * 1000) / 1000;
         data_momen_Me_N_m.push(momen_Me_N_m);
 
@@ -667,7 +668,10 @@ $(document).ready(function () {
       }
       //end momen xoan
       //----------------------tính momen max----------
-      var momen_Me_max_do_thi = [(cong_suat_cuc_dai_Ne * 60 * 1000) / (2 * 3.14 * toc_do_vong_quay)] * [hs_a + (hs_b * hs_b) / (2 * hs_c) - hs_c * (hs_b / (2 * hs_c)) * (hs_b / (2 * hs_c))];
+      var toc_do_goc=2 * 3.14 * toc_do_vong_quay/60;
+      var toc_do_goc = Math.round(toc_do_goc * 1000) / 1000;
+
+      var momen_Me_max_do_thi = [(cong_suat_cuc_dai_Ne  * 1000) / (toc_do_goc)] * [hs_a + (hs_b * hs_b) / (2 * hs_c) - hs_c * (hs_b / (2 * hs_c)) * (hs_b / (2 * hs_c))];
       var momen_Me_max_do_thi = Math.round(momen_Me_max_do_thi * 1000) / 1000;
 
       //----------------------end tính momen max-----
@@ -692,7 +696,8 @@ $(document).ready(function () {
         toc_do_ne_V_p: data_toc_do_ne,
         momen_Me_N_m: data_momen_Me_N_m,
         cong_suat_Ne_Kw: data_cong_suat_Ne,
-        he_so_abc: hs_abc
+        he_so_abc: hs_abc,
+        toc_do_goc_rad_s:toc_do_goc
 
       }
 
@@ -1353,7 +1358,7 @@ $(document).ready(function () {
         for (let i1 = 0; i1 < phan; i1++) {
           if (van_toc_ung_tung_tay_so[i][i1] < 22.2) {
             var data_gia_toc = (nt_dong_luc_hoc[i][i1] - he_so_can_lan_fo) * (9.81 / hs_cd_quay[i]);
-            var data_gia_toc = Math.round(data_gia_toc * 100) / 100.
+            var data_gia_toc = Math.round(data_gia_toc * 1000) / 1000.
             dd_gia_toc.push(data_gia_toc)
 
 
@@ -1376,7 +1381,7 @@ $(document).ready(function () {
 
 
             } else {
-              var data_gia_toc = Math.round(data_gia_toc * 100) / 100.
+              var data_gia_toc = Math.round(data_gia_toc * 1000) / 1000.
               dd_gia_toc.push(data_gia_toc);
 
             }
