@@ -131,47 +131,47 @@ $(document).ready(function () {
     //====================================================
     //====================VD2=============================
 
-    var chieu_dai_toan_bo_Lo = 5780;
-    var chieu_rong_toan_bo_Bo = 2000;
-    var chieu_cao_toan_bo_Ho = 2360;
-    var chieu_dai_co_so_L = 3750;
-    var vet_banh_truoc_B1 = 1740;
-    var vet_banh_sau_B2 = 1704;
-    var khoang_sang_gam_xe_H1 = 165;
-    var goc_thoat_truoc_γ1 = 0;
-    var goc_thoat_sau_γ2 = 0;
-    var van_toc_max_Vmax = 260;
-    //------------------------------
-    var trong_luong_ban_than = 2455;
-    var trong_luong_hanh_khach = 60;
-    var trong_luong_hanh_ly = 20;
-    var hieu_suat_truyen_luc = 0.92;
-    var he_so_cac_khong_khi = 0.2;
-    var he_so_can_lan_fo =  0.016;
-    //-------------------------
-    var he_so_dien_tich_can_chinh_dien = 0.78;
-    var chieu_rong_mat_lop = 215;
-    var ti_le_H_B = 75;
-    var duong_kinh_vanh_xe = 16;
-    var he_so_bien_dang_lop = 0.94
-    //------------------------
-    var so_cho_tren_o_to = 16;
-    var phan_tram_luc_cau_truoc = 55;
-    var phan_tram_luc_cau_sau = 45;
-    //-------------------------
-    var thong_so_abc = 'TH4';
-    var he_so_can_tong_cong_max = 0.4;
-    var he_so_lamda = 1;
-    var toc_do_vong_quay = 3200;
-    //------------------------
-    var cap_dc = 6;
-    var ty_so_tai_nmax = 1;
-    var ty_so_hsp_max = 1;
-    var he_so_pbtt_m = 1.1;
-    var he_so_bam = 0.9;
-    var cau_chu_dong = "TH2";
-    //-------------------------
-    var thoi_gian_chuyen_so = 2;
+    // var chieu_dai_toan_bo_Lo = 5780;
+    // var chieu_rong_toan_bo_Bo = 2000;
+    // var chieu_cao_toan_bo_Ho = 2360;
+    // var chieu_dai_co_so_L = 3750;
+    // var vet_banh_truoc_B1 = 1740;
+    // var vet_banh_sau_B2 = 1704;
+    // var khoang_sang_gam_xe_H1 = 165;
+    // var goc_thoat_truoc_γ1 = 0;
+    // var goc_thoat_sau_γ2 = 0;
+    // var van_toc_max_Vmax = 260;
+    // //------------------------------
+    // var trong_luong_ban_than = 2455;
+    // var trong_luong_hanh_khach = 60;
+    // var trong_luong_hanh_ly = 20;
+    // var hieu_suat_truyen_luc = 0.92;
+    // var he_so_cac_khong_khi = 0.2;
+    // var he_so_can_lan_fo =  0.016;
+    // //-------------------------
+    // var he_so_dien_tich_can_chinh_dien = 0.78;
+    // var chieu_rong_mat_lop = 215;
+    // var ti_le_H_B = 75;
+    // var duong_kinh_vanh_xe = 16;
+    // var he_so_bien_dang_lop = 0.94
+    // //------------------------
+    // var so_cho_tren_o_to = 16;
+    // var phan_tram_luc_cau_truoc = 55;
+    // var phan_tram_luc_cau_sau = 45;
+    // //-------------------------
+    // var thong_so_abc = 'TH4';
+    // var he_so_can_tong_cong_max = 0.4;
+    // var he_so_lamda = 1;
+    // var toc_do_vong_quay = 3200;
+    // //------------------------
+    // var cap_dc = 6;
+    // var ty_so_tai_nmax = 1;
+    // var ty_so_hsp_max = 1;
+    // var he_so_pbtt_m = 1.1;
+    // var he_so_bam = 0.9;
+    // var cau_chu_dong = "TH2";
+    // //-------------------------
+    // var thoi_gian_chuyen_so = 2;
     //=============================================
     //ty so truyen tay 1: 2.27
     //====================================================
