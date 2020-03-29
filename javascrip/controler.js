@@ -6,8 +6,10 @@ $(document).ready(function () {
 
 
   $(".sldl1").click(function (e) {
+
     e.preventDefault();
 
+    $(".el .alert-danger").addClass("an");
 
 
     //------------------------
@@ -114,7 +116,7 @@ $(document).ready(function () {
     // var thong_so_abc = 'TH1';
     // var he_so_can_tong_cong_max = 0.4;
     // var he_so_lamda = 1.1;
-    // var toc_do_vong_quay = 6000;
+    // var toc_do_vong_quay = 5200;
     // //------------------------
     // var cap_dc = 5;
     // var ty_so_tai_nmax = 1;
@@ -461,16 +463,16 @@ $(document).ready(function () {
 
     //làm tròn dữ liệu 
 
-    var Vmax_m_s = Math.round(Vmax_m_s * 1000 + Number.EPSILON) / 1000.
+    var Vmax_m_s = Math.round(Vmax_m_s * 100000 + Number.EPSILON) / 100000.
     var he_so_can_lan_f = Math.round(he_so_can_lan_f * 100000 + Number.EPSILON) / 100000.
-    var dien_tich_can_chinh_dien = Math.round(dien_tich_can_chinh_dien * 1000 + Number.EPSILON) / 1000.
-    var chieu_cao_hong_lop_H = Math.round(chieu_cao_hong_lop_H * 1000 + Number.EPSILON) / 1000.
-    var ban_kinh_thiet_ke_ro = Math.round(ban_kinh_thiet_ke_ro * 1000 + Number.EPSILON) / 1000.
-    var ban_kinh_dong_luc_hoc_rđ = Math.round(ban_kinh_dong_luc_hoc_rđ * 1000 + Number.EPSILON) / 1000.
-    var ban_kinh_dong_hoc_rk = Math.round(ban_kinh_dong_hoc_rk * 1000 + Number.EPSILON) / 1000.
-    var trong_luong_G = Math.round(trong_luong_G * 1000 + Number.EPSILON) / 1000.
-    var trong_luong_cau_truoc_Z1 = Math.round(trong_luong_cau_truoc_Z1 * 1000 + Number.EPSILON) / 1000.
-    var trong_luong_cau_sau_Z2 = Math.round(trong_luong_cau_sau_Z2 * 1000 + Number.EPSILON) / 1000.
+    var dien_tich_can_chinh_dien = Math.round(dien_tich_can_chinh_dien * 100000 + Number.EPSILON) / 100000.
+    var chieu_cao_hong_lop_H = Math.round(chieu_cao_hong_lop_H * 100000 + Number.EPSILON) / 100000.
+    var ban_kinh_thiet_ke_ro = Math.round(ban_kinh_thiet_ke_ro * 100000 + Number.EPSILON) / 100000.
+    var ban_kinh_dong_luc_hoc_rđ = Math.round(ban_kinh_dong_luc_hoc_rđ * 100000 + Number.EPSILON) / 100000.
+    var ban_kinh_dong_hoc_rk = Math.round(ban_kinh_dong_hoc_rk * 100000 + Number.EPSILON) / 100000.
+    var trong_luong_G = Math.round(trong_luong_G * 100000 + Number.EPSILON) / 100000.
+    var trong_luong_cau_truoc_Z1 = Math.round(trong_luong_cau_truoc_Z1 * 100000 + Number.EPSILON) / 100000.
+    var trong_luong_cau_sau_Z2 = Math.round(trong_luong_cau_sau_Z2 * 100000 + Number.EPSILON) / 100000.
 
 
     //end làm tròn dữ liệu 
@@ -651,7 +653,7 @@ $(document).ready(function () {
       //----cong xuat can thiet
 
       var cong_suat_can_thiet = (1 / hieu_suat_truyen_luc) * (trong_luong_G * he_so_can_tong_cong * Vmax_m_s + he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(Vmax_m_s, 3)) / 1000;
-      var cong_suat_can_thiet = Math.round(cong_suat_can_thiet * 10000 + Number.EPSILON) / 10000.
+      var cong_suat_can_thiet = Math.round(cong_suat_can_thiet * 100000 + Number.EPSILON) / 100000.
 
       //---end cong suat can thiet
 
@@ -677,7 +679,7 @@ $(document).ready(function () {
       var data_toc_do_ne = [];
 
       for (let t1 = 0; t1 < MIN_val_lamda.length; t1++) {
-        var val_ne = Math.round(MIN_val_lamda[t1] * toc_do_vong_quay * 1000) / 1000;
+        var val_ne = Math.round(MIN_val_lamda[t1] * toc_do_vong_quay * 100000) / 100000;
 
         data_toc_do_ne.push(val_ne);
 
@@ -687,7 +689,7 @@ $(document).ready(function () {
 
       //-------cong suat cuc dai Ne(max)
       var cong_suat_cuc_dai_Ne = cong_suat_can_thiet / (hs_a * he_so_lamda + hs_b * Math.pow(he_so_lamda, 2) - hs_c * Math.pow(he_so_lamda, 3));
-      var cong_suat_cuc_dai_Ne = Math.round(cong_suat_cuc_dai_Ne * 1000) / 1000
+      var cong_suat_cuc_dai_Ne = Math.round(cong_suat_cuc_dai_Ne * 100000) / 100000
       //------- end cong suat cuc dai Ne(max)
 
 
@@ -708,7 +710,7 @@ $(document).ready(function () {
       var data_momen_Me_N_m = [];
       for (let t2 = 0; t2 < MIN_val_lamda.length; t2++) {
         var momen_Me_N_m = 9500 * (data_cong_suat_Ne[t2] / data_toc_do_ne[t2]);
-        var momen_Me_N_m = Math.round(momen_Me_N_m * 1000) / 1000;
+        var momen_Me_N_m = Math.round(momen_Me_N_m * 100000) / 100000;
         data_momen_Me_N_m.push(momen_Me_N_m);
 
 
@@ -716,15 +718,15 @@ $(document).ready(function () {
       //end momen xoan
       //----------------------tính momen max----------
       var momen_Me_max_do_thi = [(cong_suat_cuc_dai_Ne * 60 * 1000) / (2 * 3.14 * toc_do_vong_quay)] * [hs_a + (hs_b * hs_b) / (2 * hs_c) - hs_c * (hs_b / (2 * hs_c)) * (hs_b / (2 * hs_c))];
-      var momen_Me_max_do_thi = Math.round(momen_Me_max_do_thi * 1000) / 1000;
+      var momen_Me_max_do_thi = Math.round(momen_Me_max_do_thi * 100000) / 100000;
 
       //----------------------end tính momen max-----
 
       //-------tính công suất----
       var cong_suat_max_do_thi = cong_suat_cuc_dai_Ne * 1.1
-      var cong_suat_max_do_thi = Math.round(cong_suat_max_do_thi * 1000) / 1000;
+      var cong_suat_max_do_thi = Math.round(cong_suat_max_do_thi * 100000) / 100000;
       var do_doc_du_doan=(Math.atan((he_so_can_tong_cong_max-he_so_can_lan_fo)))*(180/Math.PI)
-      var do_doc_du_doan=Math.round(do_doc_du_doan * 1000) / 1000
+      var do_doc_du_doan=Math.round(do_doc_du_doan * 100000) / 100000
       //-------end tính công suất----
 
       //-----in ket quả đặc tính ngoài của dộng cơ
@@ -858,7 +860,7 @@ $(document).ready(function () {
 
       var toc_do_max_tai_v_max = data_toc_do_ne[data_toc_do_ne.length - 1];
       var ty_so_truyen_luc_chinh = (2 * 3.14 * ban_kinh_dong_luc_hoc_rđ * toc_do_max_tai_v_max / 1000) / (60 * ty_so_tai_nmax * ty_so_hsp_max * Vmax_m_s);
-      var ty_so_truyen_luc_chinh = Math.round(ty_so_truyen_luc_chinh * 1000) / 1000;
+      var ty_so_truyen_luc_chinh = Math.round(ty_so_truyen_luc_chinh * 100000) / 100000;
       //-----------dieu kien chuyen dong----
 
 
@@ -866,7 +868,7 @@ $(document).ready(function () {
 
 
       var dk_can = (he_so_can_tong_cong * trong_luong_G * ban_kinh_dong_luc_hoc_rđ / 1000) / (momen_Me_max_do_thi * ty_so_truyen_luc_chinh * ty_so_hsp_max * hieu_suat_truyen_luc);
-      var dk_can = Math.round(dk_can * 1000) / 1000; //dieu kien chuyen động
+      var dk_can = Math.round(dk_can * 100000) / 100000; //dieu kien chuyen động
       //-----------------------------
 
 
@@ -887,7 +889,7 @@ $(document).ready(function () {
 
 
       var dk_bam = (he_so_bam * he_so_pbtt_m * trong_luong_cau_cd * ban_kinh_dong_luc_hoc_rđ / 1000) / (momen_Me_max_do_thi * ty_so_truyen_luc_chinh * ty_so_hsp_max * hieu_suat_truyen_luc);
-      var dk_bam = Math.round(dk_bam * 1000) / 1000; //dieu kien chuyen động
+      var dk_bam = Math.round(dk_bam * 100000) / 100000; //dieu kien chuyen động
 
 
       //xet tim tay so 1
@@ -917,7 +919,7 @@ $(document).ready(function () {
       if (ty_so_tay_1 != "") {
         //tinh cong boi
       var cong_boi = Math.pow((ty_so_tay_1 / ty_so_tai_nmax), 1 / (cap_dc - 1));
-      var cong_boi = Math.round(cong_boi * 1000) / 1000;
+      var cong_boi = Math.round(cong_boi * 100000) / 100000;
       //end tinh cong boi
 
       var ty_so_lui = ty_so_tay_1;
@@ -927,7 +929,7 @@ $(document).ready(function () {
       var ty_so_truyen_cac_so = [ty_so_tay_1];
       for (let i = 2; i <= cap_dc; i++) {
         var trung_gian = ty_so_tay_1 / (Math.pow(cong_boi, (i - 1)));
-        var trung_gian = Math.round(trung_gian * 1000) / 1000;
+        var trung_gian = Math.round(trung_gian * 100000) / 100000;
         ty_so_truyen_cac_so.push(trung_gian);
 
 
@@ -946,7 +948,7 @@ $(document).ready(function () {
 
         for (let k = 0; k < data_momen_Me_N_m.length; k++) {
           var luc_keo_tong = (data_momen_Me_N_m[k] * ty_so_truyen_cac_so[i] * ty_so_truyen_luc_chinh * ty_so_hsp_max * hieu_suat_truyen_luc) / (ban_kinh_dong_luc_hoc_rđ / 1000);
-          var luc_keo_tong = Math.round(luc_keo_tong * 1000) / 1000;
+          var luc_keo_tong = Math.round(luc_keo_tong * 100000) / 100000;
           luc_keo_tong_cong.push(luc_keo_tong);
 
         }
@@ -972,7 +974,7 @@ $(document).ready(function () {
       var luc_keo = chunkArray(luc_keo_tong_cong, phan); //tỷ số truyền tại các số trung gian
       //----- chia khoang luc keo----
       var luc_bam_duong = he_so_pbtt_m * trong_luong_cau_cd * he_so_bam; //tính lực bám đường
-      var luc_bam_duong = Math.round(luc_bam_duong * 1000) / 1000;
+      var luc_bam_duong = Math.round(luc_bam_duong * 100000) / 100000;
 
       //tính vận tốc từng tay số
       var van_toc_ung_tung_tay_so_tong_cong = [];
@@ -980,7 +982,7 @@ $(document).ready(function () {
         for (let k = 0; k < data_toc_do_ne.length; k++) {
 
           var van_toc_tay_so = (2 * 3.14 * ban_kinh_dong_luc_hoc_rđ * data_toc_do_ne[k] / 1000) / (60 * ty_so_truyen_luc_chinh * ty_so_truyen_cac_so[i] * ty_so_hsp_max);
-          var van_toc_tay_so = Math.round(van_toc_tay_so * 1000) / 1000;
+          var van_toc_tay_so = Math.round(van_toc_tay_so * 100000) / 100000;
 
           van_toc_ung_tung_tay_so_tong_cong.push(van_toc_tay_so)
 
@@ -1029,14 +1031,14 @@ $(document).ready(function () {
       for (let i = 0; i < van_toc_chon.length; i++) {
         if (van_toc_chon[i] <= 22.22) {
           var luc_can_Pc = he_so_can_lan_fo * trong_luong_G + he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_chon[i], 2);
-          var luc_can_Pc = Math.round(luc_can_Pc * 1000) / 1000;
+          var luc_can_Pc = Math.round(luc_can_Pc * 100000) / 100000;
           luc_can_max_Pc.push(luc_can_Pc);
 
 
 
         } else {
           var luc_can_Pc = he_so_can_lan_fo * (1 + (Math.pow(van_toc_chon[i], 2) / 1500)) * trong_luong_G + he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_chon[i], 2);
-          var luc_can_Pc = Math.round(luc_can_Pc * 1000) / 1000;
+          var luc_can_Pc = Math.round(luc_can_Pc * 100000) / 100000;
           luc_can_max_Pc.push(luc_can_Pc);
 
 
@@ -1168,7 +1170,7 @@ $(document).ready(function () {
 
       for (let i = 0; i < van_toc_ung_tung_tay_so_tong_cong.length; i++) {
         var data_nt_dong_luc_hoc = (luc_keo_tong_cong[i] - he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_ung_tung_tay_so_tong_cong[i], 2)) * (1 / trong_luong_G);
-        var data_nt_dong_luc_hoc = Math.round(data_nt_dong_luc_hoc * 1000 + Number.EPSILON) / 1000.
+        var data_nt_dong_luc_hoc = Math.round(data_nt_dong_luc_hoc * 100000 + Number.EPSILON) / 100000.
 
         nt_dong_luc_hoc_tong.push(data_nt_dong_luc_hoc);
 
@@ -1181,7 +1183,7 @@ $(document).ready(function () {
       var dk_bam_nt_dong_luc_hoc = [];
       for (let i = 0; i < van_toc_chon.length; i++) {
         var data_dk_bam_nt_dong_luc_hoc = (luc_bam_duong - he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_chon[i], 2)) * (1 / trong_luong_G);
-        var data_dk_bam_nt_dong_luc_hoc = Math.round(data_dk_bam_nt_dong_luc_hoc * 1000 + Number.EPSILON) / 1000.
+        var data_dk_bam_nt_dong_luc_hoc = Math.round(data_dk_bam_nt_dong_luc_hoc * 100000 + Number.EPSILON) / 100000.
         dk_bam_nt_dong_luc_hoc.push(data_dk_bam_nt_dong_luc_hoc);
 
 
@@ -1214,7 +1216,7 @@ $(document).ready(function () {
         } else {
 
           var data_can_lan = he_so_can_lan_fo * (1 + ((Math.pow(van_toc_chon[i], 2)) / 1500));
-          var data_can_lan = Math.round(data_can_lan * 1000 + Number.EPSILON) / 1000.
+          var data_can_lan = Math.round(data_can_lan * 100000 + Number.EPSILON) / 100000.
           hscanlan.push(data_can_lan);
 
 
@@ -1294,7 +1296,7 @@ $(document).ready(function () {
       var data_cong_suat_NK = [];
       for (let i = 0; i < data_cong_suat_Ne.length; i++) {
         var cong_suat_NK = data_cong_suat_Ne[i] * hieu_suat_truyen_luc;
-        var cong_suat_NK = Math.round(cong_suat_NK * 1000) / 1000;
+        var cong_suat_NK = Math.round(cong_suat_NK * 100000) / 100000;
         data_cong_suat_NK.push(cong_suat_NK);
 
 
@@ -1313,13 +1315,13 @@ $(document).ready(function () {
       for (let i = 0; i < van_toc_chon.length; i++) {
         if (van_toc_chon[i] < 22.2) {
           var data_cs_can = (trong_luong_G * he_so_can_lan_fo * van_toc_chon[i] + he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_chon[i], 3)) / 1000;
-          var data_cs_can = Math.round(data_cs_can * 1000) / 1000;
+          var data_cs_can = Math.round(data_cs_can * 100000) / 100000;
           cong_suat_can.push(data_cs_can);
 
         } else {
 
           var data_cs_can = (trong_luong_G * (he_so_can_lan_fo * (1 + (Math.pow(van_toc_chon[i], 2) / 1500))) * van_toc_chon[i] + he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_chon[i], 3)) / 1000;
-          var data_cs_can = Math.round(data_cs_can * 1000) / 1000;
+          var data_cs_can = Math.round(data_cs_can * 100000) / 100000;
           cong_suat_can.push(data_cs_can);
 
 
@@ -1387,7 +1389,7 @@ $(document).ready(function () {
       var hs_cd_quay = [];
       for (let i = 0; i < ty_so_truyen_cac_so.length - 1; i++) {
         var datahs_td_cd_quay = 1.05 + 0.05 * Math.pow(ty_so_truyen_cac_so[i], 2) // khối lượng tính đến chuyển động quay
-        var datahs_td_cd_quay = Math.round(datahs_td_cd_quay * 1000 + Number.EPSILON) / 1000.
+        var datahs_td_cd_quay = Math.round(datahs_td_cd_quay * 100000 + Number.EPSILON) / 100000.
         hs_cd_quay.push(datahs_td_cd_quay)
 
 
@@ -1401,7 +1403,7 @@ $(document).ready(function () {
         for (let i1 = 0; i1 < phan; i1++) {
           if (van_toc_ung_tung_tay_so[i][i1] < 22.2) {
             var data_gia_toc = (nt_dong_luc_hoc[i][i1] - he_so_can_lan_fo) * (9.81 / hs_cd_quay[i]);
-            var data_gia_toc = Math.round(data_gia_toc * 100) / 100.
+            var data_gia_toc = Math.round(data_gia_toc * 100000) / 100000.
             dd_gia_toc.push(data_gia_toc)
 
 
@@ -1424,7 +1426,7 @@ $(document).ready(function () {
 
 
             } else {
-              var data_gia_toc = Math.round(data_gia_toc * 100) / 100.
+              var data_gia_toc = Math.round(data_gia_toc * 100000) / 100000.
               dd_gia_toc.push(data_gia_toc);
 
             }
@@ -1494,7 +1496,7 @@ $(document).ready(function () {
         var da_gtn = []
         for (let i1 = 0; i1 < phan; i1++) {
           var gt_nguoc = 1 / (gia_toc_cd[i][i1]);
-          var gt_nguoc = Math.round(gt_nguoc * 1000) / 1000;
+          var gt_nguoc = Math.round(gt_nguoc * 100000) / 100000;
           da_gtn.push(gt_nguoc);
         }
         data_gtn.push(da_gtn);
@@ -1586,16 +1588,34 @@ $(document).ready(function () {
       //----------------------------
       // tinh gia tri van toc=0.95Vmax --do thi
       var van_toc_xet = 0.95 * van_toc_ung_tung_tay_so[cap_dc - 1][phan - 1];
-      var van_toc_xet =Math.round( van_toc_xet*1000)/1000;
+      var van_toc_xet =Math.round( van_toc_xet*100000)/100000;
       var khoang_van_toc_xet = van_toc_ung_tung_tay_so[cap_dc - 1][phan - 1] - van_toc_xet
+
+
       //-------------------------
+
+      var gia_ti_gia_toc_nguoc_nhan=$("#giatoc_95").val();
+
+      $(".chon_gia_toc_95").addClass("hien");
+
+      if (gia_ti_gia_toc_nguoc_nhan != "") {
+        var gia_toc_xet = gia_ti_gia_toc_nguoc_nhan;
+        
+      } else {
+        var gia_toc_xet = (1 / gttg_gt_hai_max[0]) + (khoang_van_toc_xet / denta_van_toc_max_ttdt) * denta_gia_toc_cuoi;
+        var gia_toc_xet =Math.round( gia_toc_xet*100000)/100000;
+
+        
+      }
+
+      $("#gta_tri_gtnguoc").html('<p>Gia tốc ngược tại vận tốc = 95% vận tốc MAX</p><ul><li>Gia tốc ngược ban đầu:<strong> '+gia_toc_xet+' (s^2/m) </strong></li><li>Vận tốc xét:<strong> '+van_toc_xet+' (m/s)</strong></li></ul><p class="text-danger">Bạn có thể bỏ qua bước này!</p>');
       
       
 
       //gia toc tai diem co van toc=0.95Vmax
-      var gia_toc_xet = (1 / gttg_gt_hai_max[0]) + (khoang_van_toc_xet / denta_van_toc_max_ttdt) * denta_gia_toc_cuoi;
+      
 
-      var gia_toc_xet = Math.round(gia_toc_xet*1000)/1000;
+      var gia_toc_xet = Math.round(gia_toc_xet*100000)/100000;
       //---------------------------------
 
       //--------------lấy giá trị độ giảm-
@@ -1616,22 +1636,22 @@ $(document).ready(function () {
         for (let i = 0; i < cap_dc; i++) {
           if (van_toc_max_tay_so[i] < 22.22) {
             var denta_giam_van_toc = [he_so_can_lan_fo + (he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_max_tay_so[i], 2)) / trong_luong_G] * 9.81 * (thoi_gian_chuyen_so / hs_cd_quay[i]);
-            var denta_giam_van_toc = Math.round(denta_giam_van_toc*1000)/1000
+            var denta_giam_van_toc = Math.round(denta_giam_van_toc*100000)/100000
             do_giam_van_toc.push(denta_giam_van_toc);
             //-----------------------------
             var denta_quang_duong_sang_so = [van_toc_max_tay_so[i] - [he_so_can_lan_fo + (he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_max_tay_so[i], 2)) / trong_luong_G] * thoi_gian_chuyen_so] * thoi_gian_chuyen_so;
-            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*1000)/1000;
+            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*100000)/100000;
             quang_duong_khi_sang_so.push(denta_quang_duong_sang_so);
 
 
 
           } else {
             var denta_giam_van_toc = [he_so_can_lan_fo * (1 + ((Math.pow(van_toc_max_tay_so[i], 2)) / 1500)) + (he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_max_tay_so[i], 2)) / trong_luong_G] * 9.81 * (thoi_gian_chuyen_so / hs_cd_quay[i]);
-            var denta_giam_van_toc = Math.round(denta_giam_van_toc*1000)/1000
+            var denta_giam_van_toc = Math.round(denta_giam_van_toc*100000)/100000
             do_giam_van_toc.push(denta_giam_van_toc);
             //----------------------------
             var denta_quang_duong_sang_so = [van_toc_max_tay_so[i] - [he_so_can_lan_fo * (1 + ((Math.pow(van_toc_max_tay_so[i], 2)) / 1500)) + (he_so_cac_khong_khi * dien_tich_can_chinh_dien * Math.pow(van_toc_max_tay_so[i], 2)) / trong_luong_G] * thoi_gian_chuyen_so] * thoi_gian_chuyen_so;
-            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*1000)/1000;
+            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*100000)/100000;
             quang_duong_khi_sang_so.push(denta_quang_duong_sang_so);
 
 
@@ -1647,21 +1667,21 @@ $(document).ready(function () {
         for (let i = 0; i < cap_dc; i++) {
           if (van_toc_max_tay_so[i] < 22.22) {
             var denta_giam_van_toc = he_so_can_lan_fo * 9.81 * (thoi_gian_chuyen_so / hs_cd_quay[i]);
-            var denta_giam_van_toc = Math.round(denta_giam_van_toc*1000)/1000
+            var denta_giam_van_toc = Math.round(denta_giam_van_toc*100000)/100000
             do_giam_van_toc.push(denta_giam_van_toc);
             //-------------------------
             var denta_quang_duong_sang_so = van_toc_max_tay_so[i] * thoi_gian_chuyen_so;
-            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*1000)/1000;
+            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*100000)/100000;
             quang_duong_khi_sang_so.push(denta_quang_duong_sang_so);
 
 
 
           } else {
             var denta_giam_van_toc = he_so_can_lan_fo * (1 + ((Math.pow(van_toc_max_tay_so[i], 2)) / 1500)) * 9.81 * (thoi_gian_chuyen_so / hs_cd_quay[i]);
-            var denta_giam_van_toc = Math.round(denta_giam_van_toc*1000)/1000
+            var denta_giam_van_toc = Math.round(denta_giam_van_toc*100000)/100000
             do_giam_van_toc.push(denta_giam_van_toc);
             var denta_quang_duong_sang_so = van_toc_max_tay_so[i] * thoi_gian_chuyen_so;
-            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*1000)/1000;
+            var denta_quang_duong_sang_so=Math.round(denta_quang_duong_sang_so*100000)/100000;
             quang_duong_khi_sang_so.push(denta_quang_duong_sang_so);
 
           }
@@ -1690,7 +1710,7 @@ $(document).ready(function () {
           } else {
             if (i1 === 0) {
               var vt_so_sanh = van_toc_xet_tang_toc[i - 1][van_toc_xet_tang_toc[i - 1].length - 1] - do_giam_van_toc[i - 1];
-              var vt_so_sanh = Math.round(vt_so_sanh*1000)/1000;
+              var vt_so_sanh = Math.round(vt_so_sanh*100000)/100000;
               data_van_toc_xet.push(vt_so_sanh);
               data_gia_toc_nguoc_xet_tang_toc.push(gia_toc_nguoc_xet_tang_toc[i - 1][gia_toc_nguoc_xet_tang_toc[i - 1].length - 1]);
 
@@ -1732,7 +1752,7 @@ $(document).ready(function () {
         var giatri_jtb = [];
         for (let i1 = 0; i1 < gia_toc_nguoc_xet_tang_toc[i].length - 1; i1++) {
           var data_jtb = (gia_toc_nguoc_xet_tang_toc[i][i1 + 1] + gia_toc_nguoc_xet_tang_toc[i][i1])/2;
-          var data_jtb =Math.round(data_jtb*1000)/1000
+          var data_jtb =Math.round(data_jtb*100000)/100000
           giatri_jtb.push(data_jtb);
 
 
@@ -1748,7 +1768,7 @@ $(document).ready(function () {
         var giatri_dentavt = [];
         for (let i1 = 0; i1 < van_toc_xet_tang_toc[i].length - 1; i1++) {
           var data_xetvt = van_toc_xet_tang_toc[i][i1 + 1] - van_toc_xet_tang_toc[i][i1];
-          var data_xetvt = Math.round(data_xetvt*1000)/1000
+          var data_xetvt = Math.round(data_xetvt*100000)/100000
 
           giatri_dentavt.push(data_xetvt);
 
@@ -1766,7 +1786,7 @@ $(document).ready(function () {
         var gt_dentat = [];
         for (let i1 = 0; i1 < denta_van_toc_xet_tt[i].length; i1++) {
           
-          gt_dentat.push(Math.round(denta_van_toc_xet_tt[i][i1] * jtb_mu_tru_mot[i][i1]*1000)/1000)
+          gt_dentat.push(Math.round(denta_van_toc_xet_tt[i][i1] * jtb_mu_tru_mot[i][i1]*100000)/100000)
 
         }
         denta_t.push(gt_dentat)
@@ -1788,7 +1808,7 @@ $(document).ready(function () {
 
 
             var gt_thoi_gian_tang_toc = data_tg_tang_toc[data_tg_tang_toc.length - 1] + denta_t[i][i1];
-            var gt_thoi_gian_tang_toc = Math.round(gt_thoi_gian_tang_toc*1000)/1000;
+            var gt_thoi_gian_tang_toc = Math.round(gt_thoi_gian_tang_toc*100000)/100000;
             data_tg_tang_toc.push(gt_thoi_gian_tang_toc);
 
 
@@ -1803,7 +1823,7 @@ $(document).ready(function () {
           for (let i1 = 0; i1 < denta_t[i].length; i1++) {
 
             var gt_thoi_gian_tang_toc = data_tg_tang_toc[data_tg_tang_toc.length - 1] + denta_t[i][i1];
-            var gt_thoi_gian_tang_toc = Math.round(gt_thoi_gian_tang_toc*1000)/1000;
+            var gt_thoi_gian_tang_toc = Math.round(gt_thoi_gian_tang_toc*100000)/100000;
             data_tg_tang_toc.push(gt_thoi_gian_tang_toc);
 
 
@@ -1827,7 +1847,7 @@ $(document).ready(function () {
         var datavtb=[];
         for (let i1 = 0; i1 < van_toc_xet_tang_toc[i].length-1; i1++) {
           
-          datavtb.push( Math.round(( van_toc_xet_tang_toc[i][i1+1]+van_toc_xet_tang_toc[i][i1])*1000)/1000)
+          datavtb.push( Math.round(( van_toc_xet_tang_toc[i][i1+1]+van_toc_xet_tang_toc[i][i1])*100000)/100000)
           
         }
         van_toc_trung_binh.push(datavtb)
@@ -1842,8 +1862,8 @@ $(document).ready(function () {
       for (let i = 0; i < cap_dc; i++) {
         var datas=[];
         for (let i1 = 0; i1 < van_toc_trung_binh[i].length; i1++) {
-          Math.round(van_toc_trung_binh[i][i1]* denta_t[i][i1]*1000)/1000
-          datas.push( Math.round(van_toc_trung_binh[i][i1]* denta_t[i][i1]*1000)/1000)
+          Math.round(van_toc_trung_binh[i][i1]* denta_t[i][i1]*100000)/100000
+          datas.push( Math.round(van_toc_trung_binh[i][i1]* denta_t[i][i1]*100000)/100000)
           
         }
         denta_s.push(datas)
@@ -1866,7 +1886,7 @@ $(document).ready(function () {
 
 
             var gt_quang_duong_tang_toc = data_qd_tang_toc[data_qd_tang_toc.length - 1] + denta_s[i][i1];
-            var gt_quang_duong_tang_toc=Math.round(gt_quang_duong_tang_toc*1000)/1000
+            var gt_quang_duong_tang_toc=Math.round(gt_quang_duong_tang_toc*100000)/100000
             data_qd_tang_toc.push(gt_quang_duong_tang_toc);
 
 
@@ -1877,13 +1897,13 @@ $(document).ready(function () {
 
         } else {
           var qdthem = quang_duong_tang_toc[i - 1][quang_duong_tang_toc[i - 1].length - 1] + quang_duong_khi_sang_so[i-1];
-          var qdthem=Math.round(qdthem*1000)/1000;
+          var qdthem=Math.round(qdthem*100000)/100000;
 
           data_qd_tang_toc.push(qdthem);
           for (let i1 = 0; i1 < denta_t[i].length; i1++) {
 
             var gt_quang_duong_tang_toc = data_qd_tang_toc[data_qd_tang_toc.length - 1] + denta_s[i][i1];
-            var gt_quang_duong_tang_toc=Math.round(gt_quang_duong_tang_toc*1000)/1000
+            var gt_quang_duong_tang_toc=Math.round(gt_quang_duong_tang_toc*100000)/100000
             data_qd_tang_toc.push(gt_quang_duong_tang_toc);
 
 

@@ -359,6 +359,15 @@ $(".kqtdn").click(function (e) {
     
   });
 
+  $(".chon_gia_toc").click(function (e) { 
+    e.preventDefault();
+    
+    $(".chon_gia_toc_95").removeClass("hien");
+    
+  });
+
+
+
   
 
 });
