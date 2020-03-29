@@ -916,6 +916,9 @@ $(document).ready(function () {
 
       }
       
+
+      
+      
       var ty_so_tay_1= Number($("#ty_so_tay_1").val());
 
       if (ty_so_tay_1 != "") {
@@ -1559,8 +1562,10 @@ $(document).ready(function () {
       //----------------------------------
 
     } else {
-      $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại Phương trình cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô. Hoặc bạn chưa chọn tỷ số truyền tại tay số 1 <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+      $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong>Bạn hãy chọn tỷ số truyền tại tay số 1 <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
     }
+
+
     //goi y chon fo
     var goi_f1=nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]/(1+[Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2)]/1500);
     var goi_f2=[nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0095*hs_cd_quay[hs_cd_quay.length-1]/9.81)]/[1+([Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2)]/1500)]
@@ -2115,6 +2120,11 @@ $(document).ready(function () {
     
     
 
+        
+      }
+
+      else {
+        $(".tb10").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại Phương trình cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
         
       }
      
