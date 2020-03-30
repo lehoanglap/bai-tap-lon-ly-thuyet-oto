@@ -175,7 +175,7 @@ $(document).ready(function () {
     // var he_so_bam = 0.9;
     // var cau_chu_dong = "TH2";
     // //-------------------------
-    // var thoi_gian_chuyen_so = 2;
+    // var thoi_gian_chuyen_so = 2.5;
     //=============================================
     //ty so truyen tay 1: 2.27
     //====================================================
@@ -1814,7 +1814,7 @@ $(document).ready(function () {
       for (let i = 0; i < cap_dc; i++) {
         var giatri_dentavt = [];
         for (let i1 = 0; i1 < van_toc_xet_tang_toc[i].length - 1; i1++) {
-          var data_xetvt = van_toc_xet_tang_toc[i][i1 + 1] - van_toc_xet_tang_toc[i][i1];
+          var data_xetvt = (van_toc_xet_tang_toc[i][i1 + 1] - van_toc_xet_tang_toc[i][i1]);
           var data_xetvt =Math.round(data_xetvt*1000)/1000;
           giatri_dentavt.push(data_xetvt);
 
@@ -1823,6 +1823,11 @@ $(document).ready(function () {
         denta_van_toc_xet_tt.push(giatri_dentavt);
 
       }
+      
+      
+
+      
+      
 
       //end tinh denta van toc xet
 
@@ -1892,7 +1897,7 @@ $(document).ready(function () {
       for (let i = 0; i < cap_dc; i++) {
         var datavtb=[];
         for (let i1 = 0; i1 < van_toc_xet_tang_toc[i].length-1; i1++) {
-          datavtb.push(Math.round( (van_toc_xet_tang_toc[i][i1+1]+van_toc_xet_tang_toc[i][i1])*1000 )/1000);
+          datavtb.push(Math.round( (van_toc_xet_tang_toc[i][i1+1]+van_toc_xet_tang_toc[i][i1])/2*1000 )/1000);
           
         }
         van_toc_trung_binh.push(datavtb)
