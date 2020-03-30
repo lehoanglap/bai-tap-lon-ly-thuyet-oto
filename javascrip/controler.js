@@ -8,6 +8,12 @@ $(document).ready(function () {
   $(".sldl1").click(function (e) {
     e.preventDefault();
     $(".el .alert-danger").addClass("an");
+    
+    $(".laytruyenlucchinh").addClass("hien");
+    
+   
+
+    
 
 
 
@@ -224,6 +230,8 @@ $(document).ready(function () {
 
     } else {
       $(".tb1").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra phần Điền các kích thước cơ bản của xe.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+      $(".laytruyenlucchinh").removeClass("hien");
+      $(".chon_gia_toc_95").removeClass("hien");
     }
 
 
@@ -255,6 +263,9 @@ $(document).ready(function () {
 
     } else {
       $(".tb2").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"> <strong>Thiếu dữ liệu!</strong> kiểm tra phần thông số thiết kế phác thảo.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
+
+      $(".laytruyenlucchinh").removeClass("hien");
+      $(".chon_gia_toc_95").removeClass("hien");
     }
 
 
@@ -287,6 +298,9 @@ $(document).ready(function () {
 
     } else {
       $(".tb3").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra phần thông số chọn.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+
+      $(".laytruyenlucchinh").removeClass("hien");
+      $(".chon_gia_toc_95").removeClass("hien");
     }
 
 
@@ -318,6 +332,9 @@ $(document).ready(function () {
 
     } else {
       $(".tb4").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra phần thông số tính chọn. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>');
+
+      $(".laytruyenlucchinh").removeClass("hien");
+      $(".chon_gia_toc_95").removeClass("hien");
     }
 
 
@@ -353,6 +370,9 @@ $(document).ready(function () {
 
     } else {
       $(".tb5").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra trọng lượng và phân bố trọng lượng lên ô tô.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
+
+      $(".laytruyenlucchinh").removeClass("hien");
+      $(".chon_gia_toc_95").removeClass("hien");
     }
 
 
@@ -423,6 +443,8 @@ $(document).ready(function () {
       default:
         
         $(".tb9").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Dữ liệu không thỏa mãn!</strong> Hệ số cản chính diện chỉ được nhập 1 hoặc 0.78.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+        $(".laytruyenlucchinh").removeClass("hien");
+        $(".chon_gia_toc_95").removeClass("hien");
         break;
     }
     //var dien_tich_can_chinh_dien =Math.round( dien_tich_can_chinh_dien * 10000 + Number.EPSILON ) / 10000.
@@ -604,7 +626,7 @@ $(document).ready(function () {
 
     };
     data_duong_dac_tinh_toc_do_ngoai.push(data_nhap);
-    if (thong_so_abc != "" && he_so_can_tong_cong != "" && he_so_lamda != "" && toc_do_vong_quay != "") {
+    if (thong_so_abc != "" && he_so_can_tong_cong != "" && he_so_lamda != "" && toc_do_vong_quay != ""&& he_so_can_tong_cong_max != "") {
       //----su ly du lieu
 
       //----phan thong so a,b,c
@@ -849,6 +871,9 @@ $(document).ready(function () {
 
     } else {
       $(".tb6").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại thông số đường đặc tính tốc độ ngoài của động cơ.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+
+      $(".laytruyenlucchinh").removeClass("hien");
+      $(".chon_gia_toc_95").removeClass("hien");
     }
     //---end dac tinh toc do ngoai
 
@@ -896,12 +921,14 @@ $(document).ready(function () {
 
       //xet tim tay so 1
       if (dk_can < dk_bam) {
-        $(".laytruyenlucchinh").addClass("hien");
+        
+        
         
         
         //$(".dkthongbao .laytruyenlucchinh").html(' <div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Tốt Điều kiện cản nhỏ hơn điều kiện bám đường!</strong><p>Máy tự chọn trong khoảng điều kiện</p><div><form class="needs-validation was-validated form-row"><label for="validationTooltip26">Tỷ số truyền tại tay số 1 là:</label><input type="text" class="form-control" id="ty_so_tay_1" placeholder="Bạn tự chọn" required="#"> </form><p></p><p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li><li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong></li> </ul></div><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
 
         $("#gta_tri_dieu_kien").html('<p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li> <li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong>  </li></ul>');
+
 
         
 
@@ -911,6 +938,9 @@ $(document).ready(function () {
 
       } else {
         $(".dkthongbao .loi").html('  <div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Lỗi!</strong> Điều kiện cản phải nhỏ hơn điều kiện bám đường, chọn lại<strong>Hệ số phân bố lạo tải trọng</strong>.<p>Giá trị:</p><ul><li>Giá trị cản: <strong>' + dk_can + '</strong></li><li>Giá trị bám đường:<strong>' + dk_bam + '</strong></li></ul><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+       
+        $(".laytruyenlucchinh").removeClass("hien");
+        $(".chon_gia_toc_95").removeClass("hien");
 
 
 
@@ -928,6 +958,7 @@ $(document).ready(function () {
       //end tinh cong boi
 
       var ty_so_lui = ty_so_tay_1;
+      $(".chon_gia_toc_95").addClass("hien");
 
 
       //tim tỉ số truyền trung gian
@@ -1471,7 +1502,7 @@ $(document).ready(function () {
           type: 'spline'
         },
         title: {
-          text: 'DO THI GIA TOC OTO'
+          text: 'DO THI OTO'
         },
         subtitle: {
           text: ''
@@ -1562,7 +1593,10 @@ $(document).ready(function () {
       //----------------------------------
 
     } else {
-      $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong>Bạn hãy chọn tỷ số truyền tại tay số 1 <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+      $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong>Bạn hãy chọn tỷ số truyền tại tay số 1 sao cho phù hợp nhất <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+
+      $(".laytruyenlucchinh").addClass("hien");
+
     }
 
 
@@ -1609,7 +1643,7 @@ $(document).ready(function () {
       //gia toc tai diem co van toc=0.95Vmax
       
       //---------------------------------
-      $(".chon_gia_toc_95").addClass("hien");
+      
 
       var gia_ti_gia_toc_nguoc_nhan=Number($("#giatoc_95").val()) 
 
@@ -2101,6 +2135,9 @@ $(document).ready(function () {
     } else {
       $(".tb8").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại phần thời gian và quãng đường tăng tốc.<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
 
+      $(".laytruyenlucchinh").removeClass("hien");
+      $(".chon_gia_toc_95").removeClass("hien");
+
     }
     //-----------------end thoi gian quang duong tang toc
 
@@ -2126,7 +2163,12 @@ $(document).ready(function () {
       else {
         $(".tb10").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong> kiểm tra lại Phương trình cân bằng lực kéo và đồ thị cân bằng lực kéo của ôtô. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
         
+        $(".laytruyenlucchinh").removeClass("hien");
+        $(".chon_gia_toc_95").removeClass("hien");
+        
       }
+
+
      
       
       
@@ -2135,6 +2177,9 @@ $(document).ready(function () {
 
     //end code-------------------
     //--------Hoang Lap--------------------
+
+    
+    
     
   });
 

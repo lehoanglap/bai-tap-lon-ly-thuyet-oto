@@ -1412,7 +1412,7 @@
 
                                 </div>
 
-                                <div class="chon_gia_toc_95 an" style="position: absolute;top: 0px;z-index: 1;">
+                                <div class="chon_gia_toc_95 an" style="position: absolute;top: 0px;">
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <strong>Bạn có thể chọn gia tốc ngược ứng với vận tốc bằng 95% vận tốc cực đại. </strong>
                                         <p>Chọn thông số sao cho đồ thị thời gian, quãng đường dễ nhìn</p>
@@ -1926,6 +1926,16 @@
         </div>
         <br>
         <div class="thongbao" style="width: 40%;position: fixed;top: 10px;right: 10px;z-index: 100;">
+            <div class="tb3 el">
+
+            </div>
+            <div class="tb4 el">
+
+            </div>
+            <div class="tb2 el">
+
+            </div>
+            
             <div class="tb1 el">
                 <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Thiếu dữ liệu!</strong> kiểm tra phần Điền các kích thước cơ bản của xe.
@@ -1935,16 +1945,10 @@
                   </div> -->
             </div>
             <!-- ------------ -->
-            <div class="tb2 el">
+            
+            
 
-            </div>
-            <div class="tb3 el">
-
-            </div>
-
-            <div class="tb4 el">
-
-            </div>
+            
             <div class="tb5 el">
 
             </div>
@@ -2029,6 +2033,7 @@
             if (ktmh > 1750) {
                 var khoang = (ktmh - 1750) / 2 + 40;
                 $(".sldl1").css("right", khoang + "px");
+                $(".el").css("right", khoang + "px");
 
             }
 

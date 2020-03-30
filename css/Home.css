@@ -378,4 +378,8 @@ footer .footerr .logo a {
   font-weight: 500;
   text-decoration: none;
 }
+.el{
+  position: absolute;
+  right: 0px;
+}
 /*# sourceMappingURL=Home.css.map */
