@@ -1901,11 +1901,7 @@
 
 
     <article class="nutsl">
-        <div class="sldl1 form">
-            <button style="width: 100%;
-            font-size: 20px;
-            font-weight: 400;" class="btn btn-primary" id="sldl1">Sử lý, cập nhật dữ liệu</button>
-        </div>
+        
 
         <div class="sldl1" style="position: fixed;top: 70%;
         cursor: pointer;right: 4em;">
@@ -1977,6 +1973,27 @@
         </div>
 
     </article>
+    <article>
+        <div class="p1">
+            <h1>Trình bày báo cáo mẫu</h1>
+
+        </div>
+        <br>
+        <br>
+        <div class="form">
+            <iframe style="border: none;" class="nhung" src="https://drive.google.com/file/d/1tJBtrnFr2Bxl3aCGwn35yY8Ddp0iryVL/preview" width="100%" frameborder="0" scrolling="no" seamless="" ></iframe>
+            
+        </div>
+        <br>
+        <div class="sldl1 form">
+            <button style="width: 100%;
+            font-size: 20px;
+            font-weight: 400;" class="btn btn-primary" id="sldl1">Sử lý, cập nhật dữ liệu</button>
+        </div>
+        <br>
+
+    </article>
+    
 
     <footer>
         <div class="footerr">
@@ -2029,6 +2046,10 @@
     <script>
         $(document).ready(function () {
             var ktmh = screen.width;
+            var ktcd=screen.height/1.5;
+            $(".nhung").css("height", ktcd + "px");
+            
+            
 
             if (ktmh > 1750) {
                 var khoang = (ktmh - 1750) / 2 + 40;
@@ -2037,8 +2058,10 @@
 
             }
 
+
         });
     </script>
+    
 
 
 
