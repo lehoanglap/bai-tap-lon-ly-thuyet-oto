@@ -651,8 +651,8 @@ $(document).ready(function () {
 
           break;
         case "TH4":
-          var hs_a = 0.5;
-          var hs_b = 1.5;
+          var hs_a = 0.7;
+          var hs_b = 1.1;
           var hs_c = 1;
 
           break;
