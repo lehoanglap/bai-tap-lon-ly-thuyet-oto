@@ -163,7 +163,7 @@ $(document).ready(function () {
     // var phan_tram_luc_cau_truoc = 55;
     // var phan_tram_luc_cau_sau = 45;
     // //-------------------------
-    // var thong_so_abc = 'TH4';
+    // var thong_so_abc = 'TH2';
     // var he_so_can_tong_cong_max = 0.4;
     // var he_so_lamda = 1;
     // var toc_do_vong_quay = 3200;
@@ -172,7 +172,7 @@ $(document).ready(function () {
     // var ty_so_tai_nmax = 1;
     // var ty_so_hsp_max = 1;
     // var he_so_pbtt_m = 1.1;
-    // var he_so_bam = 0.9;
+    // var he_so_bam = 0.8;
     // var cau_chu_dong = "TH2";
     // //-------------------------
     // var thoi_gian_chuyen_so = 2.5;
@@ -1502,7 +1502,7 @@ $(document).ready(function () {
           type: 'spline'
         },
         title: {
-          text: 'DO THI OTO'
+          text: 'DO THI GIA TOC'
         },
         subtitle: {
           text: ''
