@@ -164,14 +164,14 @@ $(document).ready(function () {
     // var phan_tram_luc_cau_sau = 45;
     // //-------------------------
     // var thong_so_abc = 'TH2';
-    // var he_so_can_tong_cong_max = 0.4;
+    // var he_so_can_tong_cong_max = 0.45;
     // var he_so_lamda = 1;
     // var toc_do_vong_quay = 3200;
     // //------------------------
     // var cap_dc = 6;
     // var ty_so_tai_nmax = 1;
     // var ty_so_hsp_max = 1;
-    // var he_so_pbtt_m = 1.1;
+    // var he_so_pbtt_m = 1.7;
     // var he_so_bam = 0.8;
     // var cau_chu_dong = "TH2";
     // //-------------------------
@@ -894,7 +894,7 @@ $(document).ready(function () {
 
 
 
-      var dk_can = (he_so_can_tong_cong * trong_luong_G * ban_kinh_dong_luc_hoc_rđ / 1000) / (momen_Me_max_do_thi * ty_so_truyen_luc_chinh * ty_so_hsp_max * hieu_suat_truyen_luc);
+      var dk_can = (he_so_can_tong_cong_max * trong_luong_G * ban_kinh_dong_luc_hoc_rđ / 1000) / (momen_Me_max_do_thi * ty_so_truyen_luc_chinh * ty_so_hsp_max * hieu_suat_truyen_luc);
       var dk_can = Math.round(dk_can * 1000) / 1000; //dieu kien chuyen động
       //-----------------------------
 
@@ -910,6 +910,11 @@ $(document).ready(function () {
 
           break;
 
+          case "TH3":
+          var trong_luong_cau_cd = trong_luong_G/he_so_pbtt_m;
+
+          break;
+
         default:
           break;
       }
@@ -921,24 +926,15 @@ $(document).ready(function () {
 
       //xet tim tay so 1
       if (dk_can < dk_bam) {
-        
-        
-        
-        
+      
         //$(".dkthongbao .laytruyenlucchinh").html(' <div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Tốt Điều kiện cản nhỏ hơn điều kiện bám đường!</strong><p>Máy tự chọn trong khoảng điều kiện</p><div><form class="needs-validation was-validated form-row"><label for="validationTooltip26">Tỷ số truyền tại tay số 1 là:</label><input type="text" class="form-control" id="ty_so_tay_1" placeholder="Bạn tự chọn" required="#"> </form><p></p><p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li><li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong></li> </ul></div><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
 
         $("#gta_tri_dieu_kien").html('<p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li> <li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong>  </li></ul>');
 
 
-        
-
-
-
-
-
       } else {
         $(".dkthongbao .loi").html('  <div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Lỗi!</strong> Điều kiện cản phải nhỏ hơn điều kiện bám đường, chọn lại<strong>Hệ số phân bố lạo tải trọng</strong>.<p>Giá trị:</p><ul><li>Giá trị cản: <strong>' + dk_can + '</strong></li><li>Giá trị bám đường:<strong>' + dk_bam + '</strong></li></ul><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-       
+        $("#gta_tri_dieu_kien").html('<p class="text-danger">Ồ có vấn đề:</p><ul><li >Không tính được khoảng điều kiện tỷ số truyền </li> <li>Chọn lại hệ số phân bố tải trọng ( Tăng lên)</li></ul>');
         $(".laytruyenlucchinh").removeClass("hien");
         $(".chon_gia_toc_95").removeClass("hien");
 
@@ -1595,7 +1591,7 @@ $(document).ready(function () {
     } else {
       $(".tb7").html('<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Thiếu dữ liệu!</strong>Bạn hãy chọn tỷ số truyền tại tay số 1 sao cho phù hợp nhất <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
 
-      $(".laytruyenlucchinh").addClass("hien");
+       $(".laytruyenlucchinh").addClass("hien");
 
     }
 
