@@ -911,7 +911,7 @@ $(document).ready(function () {
           break;
 
           case "TH3":
-          var trong_luong_cau_cd = trong_luong_G/he_so_pbtt_m;
+          var trong_luong_cau_cd = trong_luong_G;
 
           break;
 
