@@ -1451,7 +1451,7 @@ $(document).ready(function () {
 
             var data_gia_toc = (nt_dong_luc_hoc[i][i1] - (he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[i][i1], 2) / 1500)))) * (9.81 / hs_cd_quay[i]);
 
-            if (Math.abs(data_gia_toc) <= 0.0095) {
+            if (data_gia_toc <= 0.0045 && data_gia_toc >= 0) {
               
               data_gia_toc = 0;
               dd_gia_toc.push(data_gia_toc);
@@ -1599,7 +1599,7 @@ $(document).ready(function () {
     //goi y chon fo
     var goi_f1=nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
 
-    var goi_f2=(nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0095*hs_cd_quay[hs_cd_quay.length-1]/9.81))/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
+    var goi_f2=(nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0045*hs_cd_quay[hs_cd_quay.length-1]/9.81))/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
     //-------------------
 
     if (gia_toc_cd[cap_dc - 1][phan - 1] != 0) {
