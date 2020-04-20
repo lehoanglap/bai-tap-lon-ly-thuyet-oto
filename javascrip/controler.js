@@ -151,7 +151,7 @@ $(document).ready(function () {
     // var trong_luong_hanh_ly = 20;
     // var hieu_suat_truyen_luc = 0.92;
     // var he_so_cac_khong_khi = 0.2;
-    // var he_so_can_lan_fo =  0.016;
+    // var he_so_can_lan_fo =  0.027;
     // //-------------------------
     // var he_so_dien_tich_can_chinh_dien = 0.78;
     // var chieu_rong_mat_lop = 215;
@@ -1451,7 +1451,7 @@ $(document).ready(function () {
 
             var data_gia_toc = (nt_dong_luc_hoc[i][i1] - (he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[i][i1], 2) / 1500)))) * (9.81 / hs_cd_quay[i]);
 
-            if (data_gia_toc <= 0.0095 && data_gia_toc >= 0) {
+            if ( Math.abs(data_gia_toc) <= 0.0095 ) {
               
               data_gia_toc = 0;
               dd_gia_toc.push(data_gia_toc);
@@ -1599,7 +1599,7 @@ $(document).ready(function () {
     //goi y chon fo
     var goi_f1=nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
 
-    var goi_f2=(nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0045*hs_cd_quay[hs_cd_quay.length-1]/9.81))/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
+    var goi_f2=(nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0095*hs_cd_quay[hs_cd_quay.length-1]/9.81))/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
     //-------------------
 
     if (gia_toc_cd[cap_dc - 1][phan - 1] != 0) {
