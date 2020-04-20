@@ -151,7 +151,7 @@ $(document).ready(function () {
     // var trong_luong_hanh_ly = 20;
     // var hieu_suat_truyen_luc = 0.92;
     // var he_so_cac_khong_khi = 0.2;
-    // var he_so_can_lan_fo =  0.027;
+    // var he_so_can_lan_fo =  0.016;
     // //-------------------------
     // var he_so_dien_tich_can_chinh_dien = 0.78;
     // var chieu_rong_mat_lop = 215;
