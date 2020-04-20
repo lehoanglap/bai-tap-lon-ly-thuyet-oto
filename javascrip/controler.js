@@ -1451,7 +1451,7 @@ $(document).ready(function () {
 
             var data_gia_toc = (nt_dong_luc_hoc[i][i1] - (he_so_can_lan_fo * (1 + (Math.pow(van_toc_ung_tung_tay_so[i][i1], 2) / 1500)))) * (9.81 / hs_cd_quay[i]);
 
-            if (data_gia_toc <= 0.0045 && data_gia_toc >= 0) {
+            if (data_gia_toc <= 0.0095 && data_gia_toc >= 0) {
               
               data_gia_toc = 0;
               dd_gia_toc.push(data_gia_toc);
