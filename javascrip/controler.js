@@ -1597,8 +1597,9 @@ $(document).ready(function () {
 
 
     //goi y chon fo
-    var goi_f1=nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]/(1+[Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2)]/1500);
-    var goi_f2=[nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0095*hs_cd_quay[hs_cd_quay.length-1]/9.81)]/[1+([Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2)]/1500)]
+    var goi_f1=nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
+
+    var goi_f2=(nt_dong_luc_hoc_tong[nt_dong_luc_hoc_tong.length-1]-(0.0095*hs_cd_quay[hs_cd_quay.length-1]/9.81))/(1+((Math.pow(van_toc_ung_tung_tay_so_tong_cong[van_toc_ung_tung_tay_so_tong_cong.length-1], 2))/1500));
     //-------------------
 
     if (gia_toc_cd[cap_dc - 1][phan - 1] != 0) {
