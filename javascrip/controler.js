@@ -174,8 +174,8 @@ $(document).ready(function () {
     // var he_so_pbtt_m = 1.7;
     // var he_so_bam = 0.8;
     // var cau_chu_dong = "TH2";
-    // //-------------------------
-    // var thoi_gian_chuyen_so = 2.5;
+    //-------------------------
+    //var thoi_gian_chuyen_so = 2.5;
     //=============================================
     //ty so truyen tay 1: 2.27
     //====================================================
@@ -927,7 +927,7 @@ $(document).ready(function () {
       //xet tim tay so 1
       if (dk_can < dk_bam) {
       
-        //$(".dkthongbao .laytruyenlucchinh").html(' <div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Tốt Điều kiện cản nhỏ hơn điều kiện bám đường!</strong><p>Máy tự chọn trong khoảng điều kiện</p><div><form class="needs-validation was-validated form-row"><label for="validationTooltip26">Tỷ số truyền tại tay số 1 là:</label><input type="text" class="form-control" id="ty_so_tay_1" placeholder="Bạn tự chọn" required="#"> </form><p></p><p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li><li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong></li> </ul></div><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
+        //$(".dkthongbao .laytruyenlucchinh").html(' <div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Tốt Điều kiện cản nhỏ hơn điều kiện bám đường!</strong><p>Máy tự chọn trong khoảng điều kiện</p><div><form class="needs-validation was-validated form-row"><label for="validationTooltip26">Tỷ số truyền tại tay số 1 là:</label><input type="number" step="any" class="form-control" id="ty_so_tay_1" placeholder="Bạn tự chọn" required="#"> </form><p></p><p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li><li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong></li> </ul></div><button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>');
 
         $("#gta_tri_dieu_kien").html('<p>Giá trị:</p><ul><li>Tỷ số truyền điều kiện cản: <strong>' + dk_can + '</strong></li> <li>Tỷ số truyền điều kiện bám đường:<strong>' + dk_bam + '</strong>  </li></ul>');
 
