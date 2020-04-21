@@ -174,8 +174,8 @@ $(document).ready(function () {
     // var he_so_pbtt_m = 1.7;
     // var he_so_bam = 0.8;
     // var cau_chu_dong = "TH2";
-    //-------------------------
-    //var thoi_gian_chuyen_so = 2.5;
+    // //-------------------------
+    // var thoi_gian_chuyen_so = 2;
     //=============================================
     //ty so truyen tay 1: 2.27
     //====================================================
@@ -1658,7 +1658,7 @@ $(document).ready(function () {
 
         
       }
-      $("#gta_tri_gtnguoc").html('<p>Gia tốc ngược tại vận tốc = 95% vận tốc MAX</p><ul><li>Gia tốc ngược ban đầu:<strong> '+gia_toc_xet+' (s^2/m) </strong></li><li>Vận tốc xét:<strong> '+van_toc_xet+' (m/s)</strong></li></ul><p class="text-danger">Bạn có thể bỏ qua bước này!</p>');
+      $("#gta_tri_gtnguoc").html('<p>Gia tốc ngược tại vận tốc = 95% vận tốc MAX</p><ul><li>Gia tốc ngược ban đầu:<strong class="text-danger"> '+gia_toc_xet+' (s^2/m) </strong></li><li>Vận tốc xét:<strong> '+van_toc_xet+' (m/s)</strong></li></ul><p class="text-danger">Bạn có thể bỏ qua bước này!</p>');
 
       //--------------lấy giá trị độ giảm-
       //lay gia tri van toc max cua tung tay so
