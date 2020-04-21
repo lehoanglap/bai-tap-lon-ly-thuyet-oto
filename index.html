@@ -1989,7 +1989,7 @@
         <div class="sldl1 form">
             <button style="width: 100%;
             font-size: 20px;
-            font-weight: 400;" class="btn btn-primary" id="sldl1">Sử lý, cập nhật dữ liệu</button>
+            font-weight: 400;" class="btn btn-primary" id="sldl1" >Sử lý, cập nhật dữ liệu</button>
         </div>
         <br>
 
@@ -2058,6 +2058,16 @@
                 $(".el").css("right", khoang + "px");
 
             }
+
+            
+            
+            $(document).keypress(function(event){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == '13'){
+                $( "#sldl1" ).click();
+                return false;
+            }
+        });
 
 
         });
