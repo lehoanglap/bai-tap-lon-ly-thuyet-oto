@@ -366,6 +366,31 @@ $(".chon_gia_toc").click(function (e) {
   
 });
 
+var offset = $(".p1").offset();
+var toppa = offset.top;
+
+
+
+
+$(window).scroll(function(){
+  var top=$(document).scrollTop();
+
+  if (top>toppa) {
+    $(".menu").addClass("cdmenu");
+    
+  } else {
+    $(".menu").removeClass("cdmenu");
+    
+  }
+  
+
+})
+
+
+
+
+
+
 
 
 
