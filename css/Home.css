@@ -378,9 +378,33 @@ footer .footerr .logo a {
   font-weight: 500;
   text-decoration: none;
 }
-.el{
-  position: absolute;
-  right: 0px;
+
+@-webkit-keyframes hoathihi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+@keyframes hoathihi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cdmenu {
+  -webkit-animation-name: hoathihi;
+          animation-name: hoathihi;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  position: fixed;
+  z-index: 99999;
+}
 /*# sourceMappingURL=Home.css.map */
