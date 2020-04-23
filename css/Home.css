@@ -406,6 +406,8 @@ footer .footerr .logo a {
   transition: ease-in-out;
   position: fixed;
   z-index: 99999;
+  min-width: 1138px;
+  max-width: 1750px;
 }
 
 .el {

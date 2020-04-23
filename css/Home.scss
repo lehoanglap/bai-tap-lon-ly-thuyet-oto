@@ -406,10 +406,12 @@ footer {
 .cdmenu{
     animation-name: hoathihi;
     animation-duration: 0.5s;
-    
     transition: ease-in-out;
     position: fixed;
     z-index: 99999;
+    min-width: 1138px;
+    max-width: 1750px;
+    
 }
 .el{
     position: absolute;
