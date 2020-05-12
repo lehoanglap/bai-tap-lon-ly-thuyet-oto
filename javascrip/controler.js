@@ -852,6 +852,9 @@ $(document).ready(function () {
 
         ]
       });
+
+     
+        
       //---end do thi dac tinh roc do ngoai
 
 
